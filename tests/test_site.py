@@ -1,5 +1,6 @@
 """Regression checks for crawlability, references, metadata and local resources."""
 import json
+from hashlib import sha256
 from pathlib import Path
 from html.parser import HTMLParser
 from urllib.parse import urlsplit, unquote, parse_qs
@@ -170,6 +171,20 @@ class SiteTest(unittest.TestCase):
             fragment = refresh.split('#')[1]
             self.assertIn(fragment, self.documents['index.html'].ids)
             self.assertEqual(doc.find('meta', name='robots')[0]['content'], 'noindex,follow')
+
+    def test_pages_reference_the_matching_versioned_styles_and_scripts(self):
+        for name, doc in self.documents.items():
+            for tag, attrs in doc.tags:
+                for key in ('href', 'src'):
+                    url = urlsplit(attrs.get(key, ''))
+                    if not url.path.startswith('/assets/site.'):
+                        continue
+                    extension = Path(url.path).suffix
+                    source = (ROOT / 'assets' / ('site' + extension)).read_bytes()
+                    digest = sha256(source).hexdigest()[:16]
+                    self.assertEqual(url.path, f'/assets/site.{digest}{extension}', name)
+                    self.assertEqual((ROOT / url.path.lstrip('/')).read_bytes(), source)
+                    self.assertFalse(url.query, 'Use distinct paths, not cache-dependent query strings')
 
 
 if __name__ == '__main__':
