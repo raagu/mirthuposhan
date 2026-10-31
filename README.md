@@ -27,12 +27,14 @@ Preview with `python3 -m http.server 4173 --bind 127.0.0.1`. Browser tests reuse
 - `data/ingredients.json` is the source of ingredient names, recipe numbering, nutritional contributions and citations. Keep whole/split and colour variants distinct. Do not replace ingredient composition with claims about the finished product or assign nutrient quantities without a verified product analysis.
 - `data/shop.json` contains owner-confirmed pack prices, contacts and FAQ answers. See [the ordering content notes](docs/ordering-content.md) before changing claims or policies.
 - `scripts/build_content.py` generates `ingredients.html`, `42ingredients.txt`, metadata and the marked shop, contact, FAQ and ingredient preview blocks of `index.html`. Edit the rest of the homepage directly. The homepage shows six ingredient groups; the guide keeps all 42 entries and references.
-- `assets/styles.input.css` contains the Tailwind directives and site styles. `npm run build` produces the committed `assets/site.css`; production uses no runtime CSS compiler.
+- `assets/styles.input.css` contains the Tailwind directives and site styles. `npm run build` compiles `assets/site.css`, then `scripts/version_assets.py` copies CSS and JavaScript to filenames containing a content hash and updates HTML references. Changed files get new URLs, so returning visitors cannot reuse a previous release's styles or script. Production uses no runtime CSS compiler.
 - `assets/site.js` closes the mobile menu after navigation and opens preparation details for old `#process` links. Ordering links, ingredient text and expandable details work without JavaScript. Orders open a WhatsApp draft or the visitor's email app; the website does not process payments or collect order details.
 - Local SVG illustrations are decorative; ingredient names identify each food. They do not purport to be botanical identification photographs. Font licenses are in `assets/fonts/`.
 - WebP images are optimized copies of existing repository assets. Original images remain available. The social preview uses an existing branded product image.
 
 Before committing, run the build and tests. The PR workflow checks that generated files remain in sync, validates local links, and runs browser regression tests. Do not place private service credentials or payment secrets in this repository.
+
+Commit the generated HTML and `assets/site.<hash>.css` / `assets/site.<hash>.js` files together. Keep previously published versioned files so cached older HTML still finds its assets, including during a rollback. The unversioned CSS/JS remain for legacy links. Repeating a build with unchanged source produces the same asset names. Browser regression tests include returning visitors with a real ten-minute HTTP cache; request routing is not used for those checks because it disables the browser cache.
 
 ## Deployment and SEO follow-up
 

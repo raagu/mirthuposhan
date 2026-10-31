@@ -7,7 +7,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "python3 scripts/build_content.py && tailwindcss -c tailwind.config.cjs -i assets/styles.input.css -o assets/site.css --minify",
+    "build": "python3 scripts/build_content.py && tailwindcss -c tailwind.config.cjs -i assets/styles.input.css -o assets/site.css --minify && python3 scripts/version_assets.py",
     "test": "python3 -m unittest discover -s tests && node --check assets/site.js",
     "test:browser": "playwright test"
   }
