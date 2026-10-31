@@ -2,7 +2,7 @@
 import json
 from pathlib import Path
 from html.parser import HTMLParser
-from urllib.parse import urlsplit, unquote
+from urllib.parse import urlsplit, unquote, parse_qs
 import unittest
 import xml.etree.ElementTree as ET
 
@@ -93,7 +93,6 @@ class SiteTest(unittest.TestCase):
         self.assertEqual(len({i['id'] for i in items}), 42)
         self.assertEqual(sorted(i['recipe_position'] for i in items), list(range(1, 43)))
         for item in items:
-            self.assertIn(item['id'], self.documents['index.html'].ids)
             self.assertIn(item['id'], self.documents['ingredients.html'].ids)
             if item['status'] == 'reviewed':
                 self.assertTrue(item['sources'])
@@ -127,8 +126,42 @@ class SiteTest(unittest.TestCase):
         css = (ROOT / 'assets/styles.input.css').read_text()
         self.assertNotIn('opacity: 0;', css)
         form = self.documents['index.html']
-        for field in ('name', 'email', 'phone', 'message'):
-            self.assertTrue(form.find('label', **{'for': field}))
+        self.assertFalse(form.find('form'), 'Orders should use direct WhatsApp/email links')
+        self.assertTrue(form.find('a', href='/ingredients.html'))
+
+    def test_pack_prices_and_order_destinations(self):
+        home = self.documents['index.html']
+        for label, price in [('500 g', '₹300'), ('1 kg', '₹600')]:
+            name = f'Order on WhatsApp: {label} for {price}'
+            link = home.find('a', **{'aria-label': name})[0]
+            url = urlsplit(link['href'])
+            self.assertEqual(url.netloc, 'wa.me')
+            self.assertEqual(url.path, '/919148109589')
+            message = parse_qs(url.query)['text'][0]
+            self.assertIn(f'({label}, {price})', message)
+            self.assertIn('delivery PIN code', message)
+        email_links = [a for a in home.find('a') if a.get('href', '').startswith('mailto:')]
+        self.assertTrue(email_links)
+        for link in email_links:
+            url = urlsplit(link['href'])
+            self.assertEqual(url.path, 'mirthuposhan@gmail.com')
+            self.assertEqual(parse_qs(url.query)['subject'], ['Mirthu Poshan order'])
+            self.assertNotIn('+', url.query, 'Mail clients require percent-encoded spaces')
+
+    def test_homepage_preview_and_collapsed_information(self):
+        home = self.documents['index.html']
+        categories = [a for a in home.find('a') if 'category-card' in a.get('class', '').split()]
+        self.assertEqual(len(categories), 6)
+        self.assertFalse(home.find('article', **{'class': 'ingredient-detail'}))
+        self.assertEqual(len(self.documents['ingredients.html'].find('article')), 42)
+        faqs = [a for a in home.find('details') if 'faq-item' in a.get('class', '').split()]
+        self.assertEqual(len(faqs), 7)
+        self.assertTrue(all('open' not in a for a in home.find('details')))
+        source = (ROOT / 'index.html').read_text()
+        self.assertIn('https://share.google/eFBwM7jvW1bbd8ieB', source)
+        self.assertNotIn('info@mirthuposhan.com', source)
+        self.assertNotIn('api.web3forms.com', source)
+        self.assertIn('<title>Mirthu Poshan | Homemade Malt Flour with 42 Ingredients</title>', source)
 
     def test_historical_urls_continue_to_live_sections(self):
         for name in ('about.html', 'products.html', 'benefits.html', 'contact.html'):

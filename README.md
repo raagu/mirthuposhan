@@ -20,18 +20,19 @@ For an installed Chrome browser instead of a Playwright download:
 PLAYWRIGHT_CHROME_PATH='/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' npm run test:browser
 ```
 
-Preview with `python3 -m http.server 4173 --bind 127.0.0.1`. Browser tests reuse a local preview outside CI. All contact-form submissions in tests are mocked; tests do not send enquiries.
+Preview with `python3 -m http.server 4173 --bind 127.0.0.1`. Browser tests reuse a local preview outside CI. WhatsApp destinations are mocked in tests; tests do not send orders or email.
 
 ## Edit content
 
 - `data/ingredients.json` is the source of ingredient names, recipe numbering, nutritional contributions and citations. Keep whole/split and colour variants distinct. Do not replace ingredient composition with claims about the finished product or assign nutrient quantities without a verified product analysis.
-- `scripts/build_content.py` generates `ingredients.html`, `42ingredients.txt`, metadata and the marked ingredient section of `index.html`. Edit the rest of the homepage directly.
+- `data/shop.json` contains owner-confirmed pack prices, contacts and FAQ answers. See [the ordering content notes](docs/ordering-content.md) before changing claims or policies.
+- `scripts/build_content.py` generates `ingredients.html`, `42ingredients.txt`, metadata and the marked shop, contact, FAQ and ingredient preview blocks of `index.html`. Edit the rest of the homepage directly. The homepage shows six ingredient groups; the guide keeps all 42 entries and references.
 - `assets/styles.input.css` contains the Tailwind directives and site styles. `npm run build` produces the committed `assets/site.css`; production uses no runtime CSS compiler.
-- `assets/site.js` enhances the contact form. Native navigation, ingredient text and form submission remain available without JavaScript. Without JavaScript the external form provider handles the POST response.
+- `assets/site.js` closes the mobile menu after navigation and opens preparation details for old `#process` links. Ordering links, ingredient text and expandable details work without JavaScript. Orders open a WhatsApp draft or the visitor's email app; the website does not process payments or collect order details.
 - Local SVG illustrations are decorative; ingredient names identify each food. They do not purport to be botanical identification photographs. Font licenses are in `assets/fonts/`.
 - WebP images are optimized copies of existing repository assets. Original images remain available. The social preview uses an existing branded product image.
 
-Before committing, run the build and tests. The PR workflow checks that generated files remain in sync, validates local links, and runs browser regression tests. The external Web3Forms access key is a client-side submission identifier already present in v2; do not place private service credentials in this repository.
+Before committing, run the build and tests. The PR workflow checks that generated files remain in sync, validates local links, and runs browser regression tests. Do not place private service credentials or payment secrets in this repository.
 
 ## Deployment and SEO follow-up
 

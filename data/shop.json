@@ -1,0 +1,50 @@
+{
+  "source": "Business details confirmed by the owner during the website intake.",
+  "phone": "919148109589",
+  "phone_display": "+91 91481 09589",
+  "email": "mirthuposhan@gmail.com",
+  "hours": "Every day, 8 AM–10 PM IST",
+  "reviews_url": "https://share.google/eFBwM7jvW1bbd8ieB",
+  "packs": [
+    {
+      "id": "500g",
+      "label": "500 g",
+      "price_inr": 300
+    },
+    {
+      "id": "1kg",
+      "label": "1 kg",
+      "price_inr": 600
+    }
+  ],
+  "faqs": [
+    {
+      "question": "When will my order be dispatched?",
+      "answer": "We prepare the blend fresh after taking your order and dispatch it within one week of order confirmation. Dispatch is usually within 2–3 days of preparation. Delivery time depends on your city."
+    },
+    {
+      "question": "Is delivery free?",
+      "answer": "Yes. Our Early Bird offer includes free delivery across India. The offer continues until we announce a change."
+    },
+    {
+      "question": "How can I pay?",
+      "answer": "Courier orders require UPI payment. Cash is accepted for customer pickup or delivery by our own team, depending on your location and PIN code. Please confirm the option with us when ordering."
+    },
+    {
+      "question": "How long can I store the flour?",
+      "answer": "After opening, keep the flour in an airtight container and use within 6 months."
+    },
+    {
+      "question": "What does it taste like?",
+      "answer": "It has a mild roasted taste. The taste depends on how much flour you use. You may add jaggery or a pinch of salt if you like. Avoid salt when preparing with milk."
+    },
+    {
+      "question": "Does it contain allergens?",
+      "answer": "The blend contains barley (gluten), peanuts, almonds, walnuts, soy and sesame. It is not gluten-free. Contact us if you need more ingredient information before ordering."
+    },
+    {
+      "question": "What if I receive a damaged or incorrect pack?",
+      "answer": "Contact us on WhatsApp or email. A replacement or refund is available for a damaged or incorrect pack."
+    }
+  ]
+}
