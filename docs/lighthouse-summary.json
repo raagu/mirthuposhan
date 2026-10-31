@@ -1,0 +1,62 @@
+[
+  {
+    "page": "home",
+    "lighthouseVersion": "13.6.0",
+    "fetchTime": "2026-10-31T09:36:01.041Z",
+    "requestedUrl": "http://127.0.0.1:4173/",
+    "environment": "localhost; mobile lab simulation; not production field data",
+    "scores": {
+      "performance": 100,
+      "accessibility": 100,
+      "seo": 100
+    },
+    "metrics": {
+      "first-contentful-paint": {
+        "value": 1245.2616478584146,
+        "unit": "millisecond"
+      },
+      "largest-contentful-paint": {
+        "value": 1245.2616478584146,
+        "unit": "millisecond"
+      },
+      "total-blocking-time": {
+        "value": 0,
+        "unit": "millisecond"
+      },
+      "cumulative-layout-shift": {
+        "value": 0.01584089858842601,
+        "unit": "unitless"
+      }
+    }
+  },
+  {
+    "page": "ingredients",
+    "lighthouseVersion": "13.6.0",
+    "fetchTime": "2026-10-31T09:36:59.520Z",
+    "requestedUrl": "http://127.0.0.1:4173/ingredients.html",
+    "environment": "localhost; mobile lab simulation; not production field data",
+    "scores": {
+      "performance": 100,
+      "accessibility": 100,
+      "seo": 100
+    },
+    "metrics": {
+      "first-contentful-paint": {
+        "value": 901.6883,
+        "unit": "millisecond"
+      },
+      "largest-contentful-paint": {
+        "value": 901.6883,
+        "unit": "millisecond"
+      },
+      "total-blocking-time": {
+        "value": 0,
+        "unit": "millisecond"
+      },
+      "cumulative-layout-shift": {
+        "value": 0.0002837969550498949,
+        "unit": "unitless"
+      }
+    }
+  }
+]

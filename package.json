@@ -1,0 +1,14 @@
+{
+  "devDependencies": {
+    "@playwright/test": "1.64.1",
+    "tailwindcss": "3.4.19"
+  },
+  "name": "mirthuposhan",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "python3 scripts/build_content.py && tailwindcss -c tailwind.config.cjs -i assets/styles.input.css -o assets/site.css --minify",
+    "test": "python3 -m unittest discover -s tests && node --check assets/site.js",
+    "test:browser": "playwright test"
+  }
+}
