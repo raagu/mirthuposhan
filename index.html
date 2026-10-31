@@ -1,1101 +1,664 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mirthu Poshan | Artisanal Malted Nutrition</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;1,9..144,400&display=swap');
-        
-        :root {
-            --brand-green: #3a5a40;
-            --brand-light-green: #a3b18a;
-            --brand-cream: #fefae0;
-            --brand-gold: #bc6c25;
-            --brand-white: #ffffff;
-        }
-
-        body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: var(--brand-white);
-            scroll-behavior: smooth;
-            color: #1a1a1a;
-        }
-
-        .serif { font-family: 'Fraunces', serif; }
-        
-        .hero-section {
-            background: url('package-wider.png');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .glass-nav {
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-        }
-
-        .gradient-text {
-            background: linear-gradient(307022, var(--brand-green), var(--brand-gold));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        /* Stable Logo Styling */
-        .brand-logo-group {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            height: 48px;
-        }
-
-        .brand-logo-main {
-            height: 300%;
-            width: auto;
-            object-fit: contain;
-        }
-
-        .brand-logo-visual {
-            height: 100%;
-            width: auto;
-            object-fit: contain;
-            border-left: 1px solid rgba(0,0,0,0.1);
-            padding-left: 0.75rem;
-        }
-
-        .ingredient-card {
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            border: 1px solid rgba(0,0,0,0.05);
-        }
-
-        .ingredient-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(58, 90, 64, 0.08);
-            border-color: var(--brand-light-green);
-        }
-
-        .process-dot {
-            position: relative;
-        }
-        
-        .process-dot::after {
-            content: '';
-            position: absolute;
-            left: 50%;
-            bottom: -50px;
-            width: 2px;
-            height: 40px;
-            background: repeating-linear-gradient(to bottom, var(--brand-light-green), var(--brand-light-green) 4px, transparent 4px, transparent 8px);
-        }
-
-        @media (min-width: 768px) {
-            .process-dot::after {
-                left: 100%;
-                top: 50%;
-                width: 60px;
-                height: 2px;
-                background: repeating-linear-gradient(to right, var(--brand-light-green), var(--brand-light-green) 4px, transparent 4px, transparent 8px);
-            }
-        }
-
-        .process-card:last-child .process-dot::after { display: none; }
-
-        .btn-primary {
-            background: var(--brand-green);
-            color: white;
-            transition: all 0.3s ease;
-            box-shadow: 0 10px 20px rgba(58, 90, 64, 0.2);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 15px 30px rgba(58, 90, 64, 0.3);
-            background: #2d4531;
-        }
-
-        .reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease-out;
-        }
-
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mirthu Poshan | Homemade Malt Flour with 42 Ingredients</title>
+<meta name="description" content="Explore Mirthu Poshan homemade malt flour from Byndoor, Karnataka. Discover 42 listed ingredients, preparation guidance and contact us to order.">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="canonical" href="https://mirthuposhan.com/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_IN">
+<meta property="og:site_name" content="Mirthu Poshan">
+<meta property="og:title" content="Mirthu Poshan | Homemade Malt Flour with 42 Ingredients">
+<meta property="og:description" content="Explore Mirthu Poshan homemade malt flour from Byndoor, Karnataka. Discover 42 listed ingredients, preparation guidance and contact us to order.">
+<meta property="og:url" content="https://mirthuposhan.com/">
+<meta property="og:image" content="https://mirthuposhan.com/assets/social-preview.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Mirthu Poshan malt flour packaging">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Mirthu Poshan | Homemade Malt Flour with 42 Ingredients">
+<meta name="twitter:description" content="Explore Mirthu Poshan homemade malt flour from Byndoor, Karnataka. Discover 42 listed ingredients, preparation guidance and contact us to order.">
+<meta name="twitter:image" content="https://mirthuposhan.com/assets/social-preview.jpg">
+<meta name="twitter:image:alt" content="Mirthu Poshan malt flour packaging">
+<meta name="theme-color" content="#3a5a40">
+<link rel="icon" href="/icon.png" type="image/png">
+<link rel="stylesheet" href="/assets/site.css">
+<link rel="preload" as="image" href="/assets/hero-mobile.webp" media="(max-width: 767px)" fetchpriority="high"><link rel="preload" as="image" href="/assets/hero.webp" media="(min-width: 768px)" fetchpriority="high">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://mirthuposhan.com/#organization", "name": "Mirthu Poshan", "url": "https://mirthuposhan.com/", "logo": "https://mirthuposhan.com/icon.png", "telephone": "+91-91481-09589", "sameAs": ["https://instagram.com/mirthu_poshan"], "address": {"@type": "PostalAddress", "streetAddress": "9-196 Kaluvadi Post Mayyadi", "addressLocality": "Byndoor", "addressRegion": "Karnataka", "postalCode": "576214", "addressCountry": "IN"}}, {"@type": "WebSite", "@id": "https://mirthuposhan.com/#website", "url": "https://mirthuposhan.com/", "name": "Mirthu Poshan", "publisher": {"@id": "https://mirthuposhan.com/#organization"}}, {"@type": "WebPage", "@id": "https://mirthuposhan.com/#webpage", "url": "https://mirthuposhan.com/", "name": "Mirthu Poshan | Homemade Malt Flour with 42 Ingredients", "description": "Explore Mirthu Poshan homemade malt flour from Byndoor, Karnataka. Discover 42 listed ingredients, preparation guidance and contact us to order.", "inLanguage": "en-IN", "isPartOf": {"@id": "https://mirthuposhan.com/#website"}, "publisher": {"@id": "https://mirthuposhan.com/#organization"}}]}</script>
 </head>
-<body>
+<body><a class="skip-link" href="#main-content">Skip to content</a>
+<!-- Nav -->
+<nav aria-label="Main navigation" class="fixed w-full z-[100] glass-nav border-b border-gray-100/50">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex justify-between h-24 items-center">
+<a aria-label="Mirthu Poshan home" class="brand-logo-group cursor-pointer" href="/">
+<img alt="Mirthu Poshan" class="brand-logo-main" height="1080" src="/icon.png" width="1080"/>
+</a>
+<div class="hidden lg:flex space-x-8 text-[11px] font-bold uppercase tracking-[0.2em] text-gray-500">
+<a class="hover:text-[#3a5a40] transition" href="#home">Home</a>
+<a class="hover:text-[#3a5a40] transition" href="#about">Legacy</a>
+<a class="hover:text-[#3a5a40] transition" href="#ingredients">Ingredients</a>
+<a class="hover:text-[#3a5a40] transition" href="#process">Crafting</a>
+<a class="hover:text-[#3a5a40] transition" href="#usage">Preparation</a>
+</div>
+<div class="flex items-center">
+<a class="btn-primary px-7 py-3 rounded-full text-[10px] font-bold uppercase tracking-widest" href="#contact">Contact</a>
+</div>
+</div>
+</div>
+<details class="mobile-nav"><summary>Menu</summary><div><a class="hover:text-[#3a5a40] transition" href="#home">Home</a><a class="hover:text-[#3a5a40] transition" href="#about">Legacy</a><a class="hover:text-[#3a5a40] transition" href="#ingredients">Ingredients</a><a class="hover:text-[#3a5a40] transition" href="#process">Crafting</a><a class="hover:text-[#3a5a40] transition" href="#usage">Preparation</a><a class="btn-primary px-7 py-3 rounded-full text-[10px] font-bold uppercase tracking-widest" href="#contact">Contact</a></div></details></nav><main id="main-content"><section class="hero-section min-h-screen flex items-center pt-24" id="home">
+<div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
+<div class="relative z-10">
+<div class="inline-flex items-center space-x-2 bg-green-50/90 border border-green-100 px-4 py-2 rounded-full mb-6">
+<span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+<span class="text-xs font-bold text-green-700 uppercase tracking-widest">Artisanal Malt Flour</span>
+</div>
+<h1 class="text-4xl lg:text-6xl font-bold serif leading-tight mb-2" style="font-style: normal; font-variation-settings: 'slnt' 0;">
+<span style="color: #8BC34A;">MIRTHU</span> <span style="color: #2E7D32;">POSHAN</span>
+<span class="block text-2xl mt-4 text-[#3a5a40]">Homemade Malt Flour with 42 Ingredients</span></h1>
+<p class="text-xl text-gray-700 mb-10 leading-relaxed max-w-lg">Homemade malt flour from Byndoor, Karnataka, blending 42 listed ingredients: millets, pulses, nuts, seeds and spices. Explore the recipe and contact us for availability and ordering.</p>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="btn-primary px-10 py-5 rounded-2xl font-bold text-center" href="#ingredients">View 42 Ingredients</a>
+<a class="bg-white border-2 border-gray-100 px-10 py-5 rounded-2xl font-bold text-center hover:bg-gray-50 transition" href="#process">The Crafting Cycle</a>
+</div>
 
-    <!-- Nav -->
-    <nav class="fixed w-full z-[100] glass-nav border-b border-gray-100/50">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="flex justify-between h-24 items-center">
-                <div class="brand-logo-group cursor-pointer">
-                    <img src="icon.png" alt="Mirthu Logo" class="brand-logo-main" onerror="this.src='icon.jpg'">
-                </div>
-                
-                <div class="hidden lg:flex space-x-8 text-[11px] font-bold uppercase tracking-[0.2em] text-gray-500">
-                    <a href="#home" class="hover:text-[#3a5a40] transition">Home</a>
-                    <a href="#about" class="hover:text-[#3a5a40] transition">Legacy</a>
-                    <a href="#ingredients" class="hover:text-[#3a5a40] transition">Ingredients</a>
-                    <a href="#process" class="hover:text-[#3a5a40] transition">Crafting</a>
-                    <a href="#usage" class="hover:text-[#3a5a40] transition">Preparation</a>
-                </div>
-                
-                <div class="flex items-center">
-                    <a href="#contact" class="btn-primary px-7 py-3 rounded-full text-[10px] font-bold uppercase tracking-widest">Contact</a>
-                </div>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Hero -->
-    <section id="home" class="hero-section min-h-screen flex items-center pt-24">
-        <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
-            <div class="relative z-10">
-                <div class="inline-flex items-center space-x-2 bg-green-50/90 border border-green-100 px-4 py-2 rounded-full mb-6">
-                    <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-                    <span class="text-xs font-bold text-green-700 uppercase tracking-widest">Artisanal & Chemical Free</span>
-                </div>
-                <h1 class="text-4xl lg:text-6xl font-bold serif leading-tight mb-2" style="font-style: normal; font-variation-settings: 'slnt' 0;">
-                    <span style="color: #8BC34A;">MIRTHU</span> <span style="color: #2E7D32;">POSHAN</span>
-                </h1>
-                <p class="text-xl text-gray-700 mb-10 leading-relaxed max-w-lg">
-                    A masterfully blended malt flour featuring 42 nutrient-dense ingredients. By combining wholesome millets, crunchy nuts, seeds, and ancient cereals, we’ve crafted a timeless tribute to nutrition for the modern soul.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="#ingredients" class="btn-primary px-10 py-5 rounded-2xl font-bold text-center">View 42 Ingredients</a>
-                    <a href="#process" class="bg-white border-2 border-gray-100 px-10 py-5 rounded-2xl font-bold text-center hover:bg-gray-50 transition">The Crafting Cycle</a>
-                </div>
-                
-                <div class="mt-12 flex items-center space-x-8">
-                    <div class="flex -space-x-3">
-                        <img src="https://i.pravatar.cc/100?u=1" class="w-12 h-12 rounded-full border-4 border-white shadow-sm" />
-                        <img src="https://i.pravatar.cc/100?u=2" class="w-12 h-12 rounded-full border-4 border-white shadow-sm" />
-                        <img src="https://i.pravatar.cc/100?u=3" class="w-12 h-12 rounded-full border-4 border-white shadow-sm" />
-                    </div>
-                    <div class="text-sm">
-                        <div class="flex text-yellow-500 text-xs mb-1">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        </div>
-                        <p class="font-bold">Trusted by 1,000+ Families</p>
-                    </div>
-                </div>
-            </div>
-            <div class="relative">
-                <!-- Right side space for background image visibility -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Stats -->
-    <section class="py-12 bg-[#3a5a40]">
-        <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 lg:grid-cols-4 gap-8 text-white text-center">
-            <div><p class="text-4xl font-bold serif mb-1">42</p><p class="text-[10px] uppercase tracking-[0.2em] opacity-70">Super Ingredients</p></div>
-            <div><p class="text-4xl font-bold serif mb-1">72h</p><p class="text-[10px] uppercase tracking-[0.2em] opacity-70">Slow-Crafted</p></div>
-            <div><p class="text-4xl font-bold serif mb-1">0%</p><p class="text-[10px] uppercase tracking-[0.2em] opacity-70">Added Sugars</p></div>
-            <div><p class="text-4xl font-bold serif mb-1">0%</p><p class="text-[10px] uppercase tracking-[0.2em] opacity-70">Additives</p></div>
-        </div>
-    </section>
-
-    <!-- Legacy -->
-    <section id="about" class="py-32 bg-gradient-to-br from-[#f8f6f0] via-white to-[#fdfcf0] relative overflow-hidden">
-        <!-- Background Elements -->
-        <div class="absolute inset-0 opacity-5">
-            <div class="absolute top-20 left-20 w-32 h-32 bg-[#3a5a40] rounded-full blur-3xl"></div>
-            <div class="absolute bottom-20 right-20 w-40 h-40 bg-[#bc6c25] rounded-full blur-3xl"></div>
-        </div>
-        
-        <div class="max-w-7xl mx-auto px-6 relative z-10">
-            <!-- Header -->
-            <div class="text-center mb-20">
-                <div class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-[#3a5a40]/10 to-[#bc6c25]/10 rounded-full mb-6">
-                    <i class="fa-solid fa-leaf text-[#3a5a40] text-sm mr-2"></i>
-                    <span class="text-[#3a5a40] text-sm font-bold uppercase tracking-wider">Our Legacy</span>
-                </div>
-                <h2 class="text-4xl lg:text-6xl font-bold serif mb-6 text-[#3a5a40] leading-tight">
+</div>
+<div class="relative">
+<!-- Right side space for background image visibility -->
+</div>
+</div>
+</section><section class="py-12 bg-[#3a5a40]">
+<div class="max-w-7xl mx-auto px-6 grid grid-cols-2 lg:grid-cols-4 gap-8 text-white text-center"><div><p class="text-2xl sm:text-4xl font-bold serif mb-1">42</p><p class="text-sm uppercase tracking-widest opacity-90">Listed Ingredients</p></div><div><p class="text-2xl sm:text-4xl font-bold serif mb-1">Homemade</p><p class="text-sm uppercase tracking-widest opacity-90">Malt Flour</p></div><div><p class="text-2xl sm:text-4xl font-bold serif mb-1">Byndoor</p><p class="text-sm uppercase tracking-widest opacity-90">Karnataka</p></div><div><p class="text-2xl sm:text-4xl font-bold serif mb-1">Explore</p><p class="text-sm uppercase tracking-widest opacity-90">Our Recipe</p></div></div>
+</section><section class="py-32 bg-gradient-to-br from-[#f8f6f0] via-white to-[#fdfcf0] relative overflow-hidden" id="about">
+<!-- Background Elements -->
+<div class="absolute inset-0 opacity-5">
+<div class="absolute top-20 left-20 w-32 h-32 bg-[#3a5a40] rounded-full blur-3xl"></div>
+<div class="absolute bottom-20 right-20 w-40 h-40 bg-[#bc6c25] rounded-full blur-3xl"></div>
+</div>
+<div class="max-w-7xl mx-auto px-6 relative z-10">
+<!-- Header -->
+<div class="text-center mb-20">
+<div class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-[#3a5a40]/10 to-[#bc6c25]/10 rounded-full mb-6">
+<svg aria-hidden="true" class="site-icon text-[#3a5a40] text-sm mr-2" height="24" width="24"><use href="/assets/icons.svg#leaf"></use></svg>
+<span class="text-[#3a5a40] text-sm font-bold uppercase tracking-wider">Our Legacy</span>
+</div>
+<h2 class="text-4xl lg:text-6xl font-bold serif mb-6 text-[#3a5a40] leading-tight">
                     Nature's Bounty,
                     <span class="bg-gradient-to-r from-[#bc6c25] to-[#3a5a40] bg-clip-text text-transparent">Simplified</span>
-                </h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                    Life is busy, but your health shouldn't be. If you can’t manage the prep, simply choose the one blend that has it all.
-                </p>
-            </div>
-
-            <!-- Equivalence Showcase -->
-            <div class="mb-20">
-                <div class="grid lg:grid-cols-3 gap-8 items-center">
-                    <!-- Vegetables Side -->
-                    <div class="relative">
-                        <div class="bg-white/80 backdrop-blur-sm p-8 rounded-[3rem] shadow-2xl border border-white/50">
-                            <div class="text-center mb-6">
-                                <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                                    <i class="fa-solid fa-carrot text-white text-2xl"></i>
-                                </div>
-                                <h3 class="text-2xl font-bold text-[#3a5a40] mb-2">Multiple Meals</h3>
-                                <p class="text-gray-600 text-sm">Can't manage the prep every single day?</p>
-                            </div>
-                            
-                            <div class="aspect-square rounded-3xl overflow-hidden mb-6 shadow-lg">
-                                <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&q=80" 
-                                     class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" 
-                                     alt="Fresh vegetables and ingredients" />
-                            </div>
-                            
-                
-                        </div>
-                    </div>
-
-                    <!-- Equals Symbol -->
-                    <div class="flex flex-col items-center justify-center py-8">
-                        <div class="w-20 h-20 bg-gradient-to-br from-[#3a5a40] to-[#2d4531] rounded-full flex items-center justify-center mb-4 shadow-xl">
-                            <i class="fa-solid fa-equals text-white text-2xl"></i>
-                        </div>
-                        <p class="text-[#3a5a40] font-bold text-lg">Nutritionally Equal</p>
-                        <div class="w-1 h-12 bg-gradient-to-b from-[#3a5a40] to-transparent mt-4"></div>
-                    </div>
-
-                    <!-- Mirthu Poshan Side -->
-                    <div class="relative">
-                        <div class="bg-gradient-to-br from-[#3a5a40]/5 to-[#bc6c25]/5 backdrop-blur-sm p-8 rounded-[3rem] shadow-2xl border border-[#3a5a40]/20">
-                            <div class="text-center mb-6">
-                                <div class="w-16 h-16 bg-gradient-to-br from-[#bc6c25] to-[#3a5a40] rounded-2xl flex items-center justify-center mx-auto mb-4">
-                                    <i class="fa-solid fa-magic-wand-sparkles text-white text-2xl"></i>
-                                </div>
-                                <h3 class="text-2xl font-bold text-[#3a5a40] mb-2">One Simple Blend</h3>
-                                <p class="text-gray-600 text-sm">Complete nutrition in 2 minutes</p>
-                            </div>
-                            
-                            <div class="aspect-square rounded-3xl overflow-hidden mb-6 shadow-lg ring-4 ring-[#bc6c25]/20">
-                                <img src="package-cup.png" 
-                                     class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" 
-                                     alt="Mirthu Poshan Malt Flour" />
-                            </div>
-                            
-                        
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Story Section -->
-            <div class="bg-white/60 backdrop-blur-sm p-12 rounded-[4rem] shadow-xl border border-white/50">
-                <div class="grid lg:grid-cols-2 gap-12 items-center">
-                    <div>
-                        <h3 class="text-3xl font-bold serif mb-6 text-[#3a5a40] leading-tight">
+</h2>
+<p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">Bring variety to your daily routine with our traditional malt flour. Enjoy it alongside a balanced diet, with fruit, vegetables and other foods.</p>
+</div>
+<!-- Equivalence Showcase -->
+<div class="mb-20">
+<div class="grid lg:grid-cols-3 gap-8 items-center">
+<!-- Vegetables Side -->
+<div class="relative">
+<div class="bg-white/80 backdrop-blur-sm p-8 rounded-[3rem] shadow-2xl border border-white/50">
+<div class="text-center mb-6">
+<div class="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+<svg aria-hidden="true" class="site-icon text-white text-2xl" height="24" width="24"><use href="/assets/icons.svg#leaf"></use></svg>
+</div>
+<h3 class="text-2xl font-bold text-[#3a5a40] mb-2">Multiple Meals</h3>
+<p class="text-gray-600 text-sm">Can't manage the prep every single day?</p>
+</div>
+<div class="aspect-square rounded-3xl overflow-hidden mb-6 shadow-lg">
+<img alt="Mirthu Poshan malt flour packaging" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" decoding="async" height="769" loading="lazy" src="/assets/ingredients-context.webp" width="1000"/>
+</div>
+</div>
+</div>
+<!-- Equals Symbol -->
+<div class="flex flex-col items-center justify-center py-8">
+<div class="w-20 h-20 bg-gradient-to-br from-[#3a5a40] to-[#2d4531] rounded-full flex items-center justify-center mb-4 shadow-xl">
+<svg aria-hidden="true" class="site-icon text-white text-2xl" height="24" width="24"><use href="/assets/icons.svg#plus"></use></svg>
+</div>
+<p class="text-[#3a5a40] font-bold text-lg">Enjoy Alongside Meals</p>
+<div class="w-1 h-12 bg-gradient-to-b from-[#3a5a40] to-transparent mt-4"></div>
+</div>
+<!-- Mirthu Poshan Side -->
+<div class="relative">
+<div class="bg-gradient-to-br from-[#3a5a40]/5 to-[#bc6c25]/5 backdrop-blur-sm p-8 rounded-[3rem] shadow-2xl border border-[#3a5a40]/20">
+<div class="text-center mb-6">
+<div class="w-16 h-16 bg-gradient-to-br from-[#bc6c25] to-[#3a5a40] rounded-2xl flex items-center justify-center mx-auto mb-4">
+<svg aria-hidden="true" class="site-icon text-white text-2xl" height="24" width="24"><use href="/assets/icons.svg#seedling"></use></svg>
+</div>
+<h3 class="text-2xl font-bold text-[#3a5a40] mb-2">One Simple Blend</h3>
+<p class="text-gray-600 text-sm">Traditional malt flour for your daily routine</p>
+</div>
+<div class="aspect-square rounded-3xl overflow-hidden mb-6 shadow-lg ring-4 ring-[#bc6c25]/20">
+<img alt="Mirthu Poshan Malt Flour" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" decoding="async" height="565" loading="lazy" src="/assets/package-cup.webp" width="1000"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Story Section -->
+<div class="bg-white/60 backdrop-blur-sm p-12 rounded-[4rem] shadow-xl border border-white/50">
+<div class="grid lg:grid-cols-2 gap-12 items-center">
+<div>
+<h3 class="text-3xl font-bold serif mb-6 text-[#3a5a40] leading-tight">
                             Rooted in Tradition,
                             <span class="text-[#bc6c25]">Perfected for Modern Life</span>
-                        </h3>
-                        <p class="text-gray-600 text-lg mb-6 leading-relaxed">
-                            Mirthu Poshan was born from a simple observation: modern convenience has stripped our food of its soul. We returned to ancient methods of sprouting and blending to create nutrition that isn't just consumed—it's absorbed.
-                        </p>
-                        <div class="space-y-4">
-                            <div class="flex items-start space-x-4">
-                                <div class="w-6 h-6 bg-[#3a5a40] rounded-full flex items-center justify-center mt-1">
-                                    <i class="fa-solid fa-check text-white text-xs"></i>
-                                </div>
-                                <p class="text-gray-600">Ancient sprouting techniques for maximum bioavailability</p>
-                            </div>
-                            <div class="flex items-start space-x-4">
-                                <div class="w-6 h-6 bg-[#bc6c25] rounded-full flex items-center justify-center mt-1">
-                                    <i class="fa-solid fa-check text-white text-xs"></i>
-                                </div>
-                                <p class="text-gray-600">42 carefully selected ingredients for complete nutrition</p>
-                            </div>
-                            <div class="flex items-start space-x-4">
-                                <div class="w-6 h-6 bg-[#3a5a40] rounded-full flex items-center justify-center mt-1">
-                                    <i class="fa-solid fa-check text-white text-xs"></i>
-                                </div>
-                                <p class="text-gray-600">Homemade quality with modern convenience</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Mission Card -->
-                    <div class="bg-gradient-to-br from-[#3a5a40] to-[#2d4531] p-8 rounded-3xl text-white shadow-2xl">
-                        <div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mb-6">
-                            <i class="fa-solid fa-heart text-white text-xl"></i>
-                        </div>
-                        <h4 class="text-2xl font-bold mb-4">Our Mission</h4>
-                        <p class="text-white/90 leading-relaxed mb-6">
+</h3>
+<p class="text-gray-600 text-lg mb-6 leading-relaxed">Mirthu Poshan brings together millets, pulses, nuts, seeds and spices in a homemade malt flour. Our process draws on traditional preparation and blending methods.</p>
+<div class="space-y-4">
+<div class="flex items-start space-x-4">
+<div class="w-6 h-6 bg-[#3a5a40] rounded-full flex items-center justify-center mt-1">
+<svg aria-hidden="true" class="site-icon text-white text-xs" height="24" width="24"><use href="/assets/icons.svg#check"></use></svg>
+</div>
+<p class="text-gray-600">Traditional preparation for flavour and texture</p>
+</div>
+<div class="flex items-start space-x-4">
+<div class="w-6 h-6 bg-[#bc6c25] rounded-full flex items-center justify-center mt-1">
+<svg aria-hidden="true" class="site-icon text-white text-xs" height="24" width="24"><use href="/assets/icons.svg#check"></use></svg>
+</div>
+<p class="text-gray-600">42 listed ingredients across several food groups</p>
+</div>
+<div class="flex items-start space-x-4">
+<div class="w-6 h-6 bg-[#3a5a40] rounded-full flex items-center justify-center mt-1">
+<svg aria-hidden="true" class="site-icon text-white text-xs" height="24" width="24"><use href="/assets/icons.svg#check"></use></svg>
+</div>
+<p class="text-gray-600">Homemade quality with modern convenience</p>
+</div>
+</div>
+</div>
+<!-- Mission Card -->
+<div class="bg-gradient-to-br from-[#3a5a40] to-[#2d4531] p-8 rounded-3xl text-white shadow-2xl">
+<div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mb-6">
+<svg aria-hidden="true" class="site-icon text-white text-xl" height="24" width="24"><use href="/assets/icons.svg#heart"></use></svg>
+</div>
+<h4 class="text-2xl font-bold mb-4">Our Mission</h4>
+<p class="text-white/90 leading-relaxed mb-6">
                             To make traditional Indian nutrition accessible to modern families by providing the highest quality, homemade malt flour that nourishes the body and soul.
                         </p>
-                        <div class="flex items-center space-x-3">
-                            <div class="w-3 h-3 bg-[#bc6c25] rounded-full"></div>
-                            <span class="text-sm text-white/80">Preserving ancient wisdom for contemporary health</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<div class="flex items-center space-x-3">
+<div class="w-3 h-3 bg-[#bc6c25] rounded-full"></div>
+<span class="text-sm text-white/80">Preserving ancient wisdom for contemporary health</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><section class="py-32 bg-gradient-to-br from-[#f8f6f0] via-white to-[#fdfcf0] relative overflow-hidden" id="ingredients"><div class="max-w-7xl mx-auto px-6 relative z-10">
+<h2 class="text-4xl lg:text-6xl font-bold serif mb-6 text-[#3a5a40]">Explore Our 42 Ingredients</h2>
+<p class="text-lg text-gray-600 leading-relaxed">Millets, pulses, nuts, seeds and spices each bring something different to the recipe. See their general nutritional contributions below.</p>
+<p class="nutrition-note">Ingredient composition is not a nutrition analysis of this finished flour. Amounts vary with variety, processing and serving size. Contains barley (gluten), peanuts, almonds, walnuts, soy and sesame. This blend is not gluten-free. Ask us about allergen handling before ordering.</p>
+<!-- INGREDIENTS:START -->
+<h3 class="category-title">Millets (8)</h3>
+<div class="ingredient-grid">
+<article class="ingredient-detail" id="kodo-millet">
+<svg class="site-icon ingredient-icon" aria-hidden="true" width="48" height="48"><use href="/assets/ingredients.svg#grain"></use></svg>
+<h4>Kodo Millet</h4>
+<p><strong>Carbohydrate and fibre</strong></p>
+<p><a href="/ingredients.html#kodo-millet">Read about Kodo Millet</a></p>
+</article>
+<article class="ingredient-detail" id="foxtail-millet">
+<svg class="site-icon ingredient-icon" aria-hidden="true" width="48" height="48"><use href="/assets/ingredients.svg#grain"></use></svg>
+<h4>Navane (Foxtail Millet)</h4>
+<p><strong>Carbohydrate and protein</strong></p>
+<p><a href="/ingredients.html#foxtail-millet">Read about Navane (Foxtail Millet)</a></p>
+</article>
+<article class="ingredient-detail" id="proso-millet">
+<svg class="site-icon ingredient-icon" aria-hidden="true" width="48" height="48"><use href="/assets/ingredients.svg#grain"></use></svg>
+<h4>Baragu (Proso Millet)</h4>
+<p><strong>Carbohydrate and protein</strong></p>
+<p><a href="/ingredients.html#proso-millet">Read about Baragu (Proso Millet)</a></p>
+</article>
+<article class="ingredient-detail" id="little-millet">
+<svg class="site-icon ingredient-icon" aria-hidden="true" width="48" height="48"><use href="/assets/ingredients.svg#grain"></use></svg>
+<h4>Saame (Little Millet)</h4>
+<p><strong>Carbohydrate and fibre</strong></p>
+<p><a href="/ingredients.html#little-millet">Read about Saame (Little Millet)</a></p>
+</article>
+<article class="ingredient-detail" id="browntop-millet">
+<svg class="site-icon ingredient-icon" aria-hidden="true" width="48" height="48"><use href="/assets/ingredients.svg#grain"></use></svg>
+<h4>Korale (Browntop Millet)</h4>
+<p><strong>Carbohydrate and fibre</strong></p>
+<p><a href="/ingredients.html#browntop-millet">Read about Korale (Browntop Millet)</a></p>
+</article>
+<article class="ingredient-detail" id="barnyard-millet">
+<svg class="site-icon ingredient-icon" aria-hidden="true" width="48" height="48"><use href="/assets/ingredients.svg#grain"></use></svg>
+<h4>Oodhalu (Barnyard Millet)</h4>
+<p><strong>Carbohydrate and fibre</strong></p>
+<p><a href="/ingredients.html#barnyard-millet">Read about Oodhalu (Barnyard Millet)</a></p>
+</article>
+<article class="ingredient-detail" id="finger-millet">
+<svg class="site-icon ingredient-icon" aria-hidden="true" width="48" height="48"><use href="/assets/ingredients.svg#grain"></use></svg>
+<h4>Raagi (Finger Millet)</h4>
+<p><strong>Calcium</strong></p>
+<p><a href="/ingredients.html#finger-millet">Read about Raagi (Finger Millet)</a></p>
+</article>
+<article class="ingredient-detail" id="jowar">
+<svg class="site-icon ingredient-icon" aria-hidden="true" width="48" height="48"><use href="/assets/ingredients.svg#grain"></use></svg>
+<h4>Jowar (Sorghum)</h4>
+<p><strong>Carbohydrate and fibre</strong></p>
+<p><a href="/ingredients.html#jowar">Read about Jowar (Sorghum)</a></p>
+</article>
+</div>
 
-    <!-- Ingredients -->
-    <section id="ingredients" class="py-32 bg-gradient-to-br from-[#f8f6f0] via-white to-[#fdfcf0] relative overflow-hidden">
-        <!-- Background Elements -->
-        <div class="absolute inset-0 opacity-5">
-            <div class="absolute top-32 left-32 w-24 h-24 bg-[#3a5a40] rounded-full blur-3xl"></div>
-            <div class="absolute bottom-32 right-32 w-32 h-32 bg-[#bc6c25] rounded-full blur-3xl"></div>
-            <div class="absolute top-1/2 left-1/4 w-16 h-16 bg-[#3a5a40] rounded-full blur-2xl"></div>
-        </div>
-        
-        <div class="max-w-7xl mx-auto px-6 relative z-10">
-            <!-- Hero Header -->
-            <div class="text-center mb-20">
-                <div class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-[#3a5a40]/10 to-[#bc6c25]/10 rounded-full mb-8">
-                    <i class="fa-solid fa-flask text-[#3a5a40] text-sm mr-2"></i>
-                    <span class="text-[#3a5a40] text-sm font-bold uppercase tracking-wider">Nutritional Alchemy</span>
-                </div>
-                <h2 class="text-5xl lg:text-7xl font-bold serif mb-8 text-[#3a5a40] leading-tight">
-                    The Science of 
-                    <span class="bg-gradient-to-r from-[#bc6c25] to-[#3a5a40] bg-clip-text text-transparent">42</span>
-                </h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-12">
-                    Each ingredient is carefully selected not just for flavor, but for its unique nutritional profile and synergistic benefits when combined with the others.
-                </p>
-                
-                <!-- Key Stats -->
-                <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto mb-16">
-                    <div class="bg-white/70 backdrop-blur-sm p-6 rounded-2xl border border-white/50 shadow-lg">
-                        <div class="text-3xl font-bold text-[#3a5a40] mb-1">6</div>
-                        <div class="text-sm text-gray-600 font-medium">Ancient Millets</div>
-                    </div>
-                    <div class="bg-white/70 backdrop-blur-sm p-6 rounded-2xl border border-white/50 shadow-lg">
-                        <div class="text-3xl font-bold text-[#bc6c25] mb-1">26</div>
-                        <div class="text-sm text-gray-600 font-medium">Protein Legumes</div>
-                    </div>
-                    <div class="bg-white/70 backdrop-blur-sm p-6 rounded-2xl border border-white/50 shadow-lg">
-                        <div class="text-3xl font-bold text-[#3a5a40] mb-1">8</div>
-                        <div class="text-sm text-gray-600 font-medium">Nutrient Seeds</div>
-                    </div>
-                    <div class="bg-white/70 backdrop-blur-sm p-6 rounded-2xl border border-white/50 shadow-lg">
-                        <div class="text-3xl font-bold text-[#bc6c25] mb-1">2</div>
-                        <div class="text-sm text-gray-600 font-medium">Nuts</div>
-                    </div>
-                </div>
-            </div>
+<h3 class="category-title">Nuts (2)</h3>
+<div class="ingredient-grid">
+<article class="ingredient-detail" id="almond">
+<svg class="site-icon ingredient-icon" aria-hidden="true" width="48" height="48"><use href="/assets/ingredients.svg#almond"></use></svg>
+<h4>Almond</h4>
+<p><strong>Vitamin E and unsaturated fats</strong></p>
+<p><a href="/ingredients.html#almond">Read about Almond</a></p>
+</article>
+<article class="ingredient-detail" id="walnut">
+<svg class="site-icon ingredient-icon" aria-hidden="true" width="48" height="48"><use href="/assets/ingredients.svg#walnut"></use></svg>
+<h4>Walnut</h4>
+<p><strong>Plant omega-3 (ALA)</strong></p>
+<p><a href="/ingredients.html#walnut">Read about Walnut</a></p>
+</article>
+</div>
 
-            <!-- Category-wise Ingredients -->
-            <div class="space-y-16">
-                <!-- Millets Category (6 ingredients) -->
-                <div class="ingredient-category">
-                    <div class="flex items-center mb-8">
-                        <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mr-4">
-                            <i class="fa-solid fa-wheat-awn text-white text-xl"></i>
-                        </div>
-                        <div>
-                            <h3 class="text-2xl font-bold text-[#3a5a40] mb-1">Ancient Millets</h3>
-                            <p class="text-gray-600 text-sm">Gluten-free powerhouses rich in fiber, protein, and essential minerals</p>
-                        </div>
-                    </div>
-                    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-                        <div class="ingredient-premium-card group bg-white p-6 rounded-3xl shadow-lg border border-green-100 hover:shadow-xl hover:border-green-200 transition-all duration-300">
-                            <div class="w-16 h-16 bg-gradient-to-br from-green-100 to-green-200 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                                <i class="fa-solid fa-seedling text-green-600 text-2xl"></i>
-                            </div>
-                            <h4 class="font-bold text-sm mb-2 text-[#3a5a40]">Kodo Millet</h4>
-                            <p class="text-xs text-[#bc6c25] font-bold uppercase">Fiber Rich</p>
-                        </div>
-                        
-                        <div class="ingredient-premium-card group bg-white p-6 rounded-3xl shadow-lg border border-yellow-100 hover:shadow-xl hover:border-yellow-200 transition-all duration-300">
-                            <div class="w-16 h-16 bg-gradient-to-br from-yellow-100 to-yellow-200 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                                <i class="fa-solid fa-leaf text-yellow-600 text-2xl"></i>
-                            </div>
-                            <h4 class="font-bold text-sm mb-2 text-[#3a5a40]">Navane Foxtail Millet</h4>
-                            <p class="text-xs text-[#bc6c25] font-bold uppercase">Iron Rich</p>
-                        </div>
-                        
-                        <div class="ingredient-premium-card group bg-white p-6 rounded-3xl shadow-lg border border-emerald-100 hover:shadow-xl hover:border-emerald-200 transition-all duration-300">
-                            <div class="w-16 h-16 bg-gradient-to-br from-emerald-100 to-emerald-200 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                                <i class="fa-solid fa-seedling text-emerald-600 text-2xl"></i>
-                            </div>
-                            <h4 class="font-bold text-sm mb-2 text-[#3a5a40]">Baragu Millet</h4>
-                            <p class="text-xs text-[#bc6c25] font-bold uppercase">Protein Plus</p>
-                        </div>
-                        
-                        <div class="ingredient-premium-card group bg-white p-6 rounded-3xl shadow-lg border border-amber-100 hover:shadow-xl hover:border-amber-200 transition-all duration-300">
-                            <div class="w-16 h-16 bg-gradient-to-br from-amber-100 to-amber-200 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                                <i class="fa-solid fa-wheat-awn text-amber-600 text-2xl"></i>
-                            </div>
-                            <h4 class="font-bold text-sm mb-2 text-[#3a5a40]">Saame Millet</h4>
-                            <p class="text-xs text-[#bc6c25] font-bold uppercase">B Vitamins</p>
-                        </div>
-                        
-                        <div class="ingredient-premium-card group bg-white p-6 rounded-3xl shadow-lg border border-lime-100 hover:shadow-xl hover:border-lime-200 transition-all duration-300">
-                            <div class="w-16 h-16 bg-gradient-to-br from-lime-100 to-lime-200 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                                <i class="fa-solid fa-seedling text-lime-600 text-2xl"></i>
-                            </div>
-                            <h4 class="font-bold text-sm mb-2 text-[#3a5a40]">Korale (Brown Top Millet)</h4>
-                            <p class="text-xs text-[#bc6c25] font-bold uppercase">Antioxidants</p>
-                        </div>
-                        
-                        <div class="ingredient-premium-card group bg-white p-6 rounded-3xl shadow-lg border border-teal-100 hover:shadow-xl hover:border-teal-200 transition-all duration-300">
-                            <div class="w-16 h-16 bg-gradient-to-br from-teal-100 to-teal-200 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                                <i class="fa-solid fa-seedling text-teal-600 text-2xl"></i>
-                            </div>
-                            <h4 class="font-bold text-sm mb-2 text-[#3a5a40]">Oodhalu Millet</h4>
-                            <p class="text-xs text-[#bc6c25] font-bold uppercase">Minerals</p>
-                        </div>
-                    </div>
-                </div>
+<h3 class="category-title">Seeds (8)</h3>
+<div class="ingredient-grid">
+<article class="ingredient-detail" id="pumpkin-seeds">
+<svg class="site-icon ingredient-icon" aria-hidden="true" width="48" height="48"><use href="/assets/ingredients.svg#seed"></use></svg>
+<h4>Pumpkin Seeds</h4>
+<p><strong>Magnesium</strong></p>
+<p><a href="/ingredients.html#pumpkin-seeds">Read about Pumpkin Seeds</a></p>
+</article>
+<article class="ingredient-detail" id="cucumber-seeds">
+<svg class="site-icon ingredient-icon" aria-hidden="true" width="48" height="48"><use href="/assets/ingredients.svg#seed"></use></svg>
+<h4>Cucumber Seeds</h4>
+<p><strong>Seed oil</strong></p>
+<p><a href="/ingredients.html#cucumber-seeds">Read about Cucumber Seeds</a></p>
+</article>
+<article class="ingredient-detail" id="sunflower-seeds">
+<svg class="site-icon ingredient-icon" aria-hidden="true" width="48" height="48"><use href="/assets/ingredients.svg#seed"></use></svg>
+<h4>Sunflower Seeds</h4>
+<p><strong>Vitamin E</strong></p>
+<p><a href="/ingredients.html#sunflower-seeds">Read about Sunflower Seeds</a></p>
+</article>
+<article class="ingredient-detail" id="watermelon-seeds">
+<svg class="site-icon ingredient-icon" aria-hidden="true" width="48" height="48"><use href="/assets/ingredients.svg#seed"></use></svg>
+<h4>Watermelon Seeds</h4>
+<p><strong>Protein and fats</strong></p>
+<p><a href="/ingredients.html#watermelon-seeds">Read about Watermelon Seeds</a></p>
+</article>
+<article class="ingredient-detail" id="poppy-seeds">
+<svg class="site-icon ingredient-icon" aria-hidden="true" width="48" height="48"><use href="/assets/ingredients.svg#seed"></use></svg>
+<h4>Poppy Seeds</h4>
+<p><strong>Fats and minerals</strong></p>
+<p><a href="/ingredients.html#poppy-seeds">Read about Poppy Seeds</a></p>
+</article>
+<article class="ingredient-detail" id="sesame-seeds">
+<svg class="site-icon ingredient-icon" aria-hidden="true" width="48" height="48"><use href="/assets/ingredients.svg#seed"></use></svg>
+<h4>Til (Sesame Seeds)</h4>
+<p><strong>Unsaturated fats</strong></p>
+<p><a href="/ingredients.html#sesame-seeds">Read about Til (Sesame Seeds)</a></p>
+</article>
+<article class="ingredient-detail" id="fenugreek-seeds">
+<svg class="site-icon ingredient-icon" aria-hidden="true" width="48" height="48"><use href="/assets/ingredients.svg#seed"></use></svg>
+<h4>Fenugreek Seeds</h4>
+<p><strong>Fibre and culinary flavour</strong></p>
+<p><a href="/ingredients.html#fenugreek-seeds">Read about Fenugreek Seeds</a></p>
+</article>
+<article class="ingredient-detail" id="flax-seeds">
+<svg class="site-icon ingredient-icon" aria-hidden="true" width="48" height="48"><use href="/assets/ingredients.svg#seed"></use></svg>
+<h4>Flax Seeds</h4>
+<p><strong>Plant omega-3 (ALA)</strong></p>
+<p><a href="/ingredients.html#flax-seeds">Read about Flax Seeds</a></p>
+</article>
+</div>
 
-                <!-- Nuts Category (2 ingredients) -->
-                <div class="ingredient-category">
-                    <div class="flex items-center mb-8">
-                        <div class="w-12 h-12 bg-gradient-to-br from-amber-500 to-orange-600 rounded-2xl flex items-center justify-center mr-4">
-                            <i class="fa-solid fa-nut text-white text-xl"></i>
-                        </div>
-                        <div>
-                            <h3 class="text-2xl font-bold text-[#3a5a40] mb-1">Premium Nuts</h3>
-                            <p class="text-gray-600 text-sm">Rich in healthy fats and essential nutrients for brain and heart health</p>
-                        </div>
-                    </div>
-                    <div class="grid grid-cols-2 md:grid-cols-2 gap-6 max-w-lg mx-auto">
-                        <div class="ingredient-premium-card group bg-white p-8 rounded-3xl shadow-lg border border-amber-100 hover:shadow-xl hover:border-amber-200 transition-all duration-300">
-                            <div class="w-20 h-20 bg-gradient-to-br from-amber-100 to-amber-200 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                                <i class="fa-solid fa-nut text-amber-600 text-3xl"></i>
-                            </div>
-                            <h4 class="font-bold text-lg mb-3 text-[#3a5a40]">Almond</h4>
-                            <p class="text-sm text-[#bc6c25] font-bold uppercase mb-3">Brain Health</p>
-                            <p class="text-sm text-gray-500 leading-relaxed">Rich in vitamin E and healthy monounsaturated fats</p>
-                        </div>
-                        
-                        <div class="ingredient-premium-card group bg-white p-8 rounded-3xl shadow-lg border border-brown-100 hover:shadow-xl hover:border-brown-200 transition-all duration-300">
-                            <div class="w-20 h-20 bg-gradient-to-br from-brown-100 to-brown-200 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                                <i class="fa-solid fa-nut text-brown-600 text-3xl"></i>
-                            </div>
-                            <h4 class="font-bold text-lg mb-3 text-[#3a5a40]">Walnut</h4>
-                            <p class="text-sm text-[#bc6c25] font-bold uppercase mb-3">Omega-3</p>
-                            <p class="text-sm text-gray-500 leading-relaxed">Excellent source of omega-3 fatty acids and antioxidants</p>
-                        </div>
-                    </div>
-                </div>
+<h3 class="category-title">Pulses and legumes (20)</h3>
+<div class="ingredient-grid">
+<article class="ingredient-detail" id="bellar">
+<svg class="site-icon ingredient-icon" aria-hidden="true" width="48" height="48"><use href="/assets/ingredients.svg#bean"></use></svg>
+<h4>Bellar (Avare Kalu)</h4>
+<p><strong>Plant protein</strong></p>
+<p><a href="/ingredients.html#bellar">Read about Bellar (Avare Kalu)</a></p>
+</article>
+<article class="ingredient-detail" id="soybeans">
+<svg class="site-icon ingredient-icon" aria-hidden="true" width="48" height="48"><use href="/assets/ingredients.svg#bean"></use></svg>
+<h4>Soya Beans</h4>
+<p><strong>Plant protein</strong></p>
+<p><a href="/ingredients.html#soybeans">Read about Soya Beans</a></p>
+</article>
+<article class="ingredient-detail" id="kabuli-chickpeas">
+<svg class="site-icon ingredient-icon" aria-hidden="true" width="48" height="48"><use href="/assets/ingredients.svg#bean"></use></svg>
+<h4>Kabul Gram (Kabuli Chickpeas)</h4>
+<p><strong>Protein and fibre</strong></p>
+<p><a href="/ingredients.html#kabuli-chickpeas">Read about Kabul Gram (Kabuli Chickpeas)</a></p>
+</article>
+<article class="ingredient-detail" id="green-gram">
+<svg class="site-icon ingredient-icon" aria-hidden="true" width="48" height="48"><use href="/assets/ingredients.svg#bean"></use></svg>
+<h4>Green Gram (Mung Bean)</h4>
+<p><strong>Protein and fibre</strong></p>
+<p><a href="/ingredients.html#green-gram">Read about Green Gram (Mung Bean)</a></p>
+</article>
+<article class="ingredient-detail" id="bellar-dal">
+<svg class="site-icon ingredient-icon" aria-hidden="true" width="48" height="48"><use href="/assets/ingredients.svg#bean"></use></svg>
+<h4>Bellar Dal (Avare Bele)</h4>
+<p><strong>Plant protein</strong></p>
+<p><a href="/ingredients.html#bellar-dal">Read about Bellar Dal (Avare Bele)</a></p>
+</article>
+<article class="ingredient-detail" id="white-cowpeas">
+<svg class="site-icon ingredient-icon" aria-hidden="true" width="48" height="48"><use href="/assets/ingredients.svg#bean"></use></svg>
+<h4>Cow Peas White</h4>
+<p><strong>Protein and fibre</strong></p>
+<p><a href="/ingredients.html#white-cowpeas">Read about Cow Peas White</a></p>
+</article>
+<article class="ingredient-detail" id="brown-cowpeas">
+<svg class="site-icon ingredient-icon" aria-hidden="true" width="48" height="48"><use href="/assets/ingredients.svg#bean"></use></svg>
+<h4>Cow Peas Brown</h4>
+<p><strong>Protein and fibre</strong></p>
+<p><a href="/ingredients.html#brown-cowpeas">Read about Cow Peas Brown</a></p>
+</article>
+<article class="ingredient-detail" id="green-peas">
+<svg class="site-icon ingredient-icon" aria-hidden="true" width="48" height="48"><use href="/assets/ingredients.svg#pea"></use></svg>
+<h4>Green Peas</h4>
+<p><strong>Protein and carbohydrate</strong></p>
+<p><a href="/ingredients.html#green-peas">Read about Green Peas</a></p>
+</article>
+<article class="ingredient-detail" id="white-peas">
+<svg class="site-icon ingredient-icon" aria-hidden="true" width="48" height="48"><use href="/assets/ingredients.svg#pea"></use></svg>
+<h4>White Peas</h4>
+<p><strong>Protein and fibre</strong></p>
+<p><a href="/ingredients.html#white-peas">Read about White Peas</a></p>
+</article>
+<article class="ingredient-detail" id="black-urad">
+<svg class="site-icon ingredient-icon" aria-hidden="true" width="48" height="48"><use href="/assets/ingredients.svg#bean"></use></svg>
+<h4>Black Urad (Whole Black Gram)</h4>
+<p><strong>Protein and fibre</strong></p>
+<p><a href="/ingredients.html#black-urad">Read about Black Urad (Whole Black Gram)</a></p>
+</article>
+<article class="ingredient-detail" id="white-rajma">
+<svg class="site-icon ingredient-icon" aria-hidden="true" width="48" height="48"><use href="/assets/ingredients.svg#bean"></use></svg>
+<h4>Rajma White</h4>
+<p><strong>Protein and fibre</strong></p>
+<p><a href="/ingredients.html#white-rajma">Read about Rajma White</a></p>
+</article>
+<article class="ingredient-detail" id="red-kidney-beans">
+<svg class="site-icon ingredient-icon" aria-hidden="true" width="48" height="48"><use href="/assets/ingredients.svg#bean"></use></svg>
+<h4>Kidney Beans Red</h4>
+<p><strong>Protein and fibre</strong></p>
+<p><a href="/ingredients.html#red-kidney-beans">Read about Kidney Beans Red</a></p>
+</article>
+<article class="ingredient-detail" id="brown-kidney-beans">
+<svg class="site-icon ingredient-icon" aria-hidden="true" width="48" height="48"><use href="/assets/ingredients.svg#bean"></use></svg>
+<h4>Kidney Beans Brown</h4>
+<p><strong>Protein and fibre</strong></p>
+<p><a href="/ingredients.html#brown-kidney-beans">Read about Kidney Beans Brown</a></p>
+</article>
+<article class="ingredient-detail" id="horse-gram">
+<svg class="site-icon ingredient-icon" aria-hidden="true" width="48" height="48"><use href="/assets/ingredients.svg#bean"></use></svg>
+<h4>Horse Gram</h4>
+<p><strong>Protein and fibre</strong></p>
+<p><a href="/ingredients.html#horse-gram">Read about Horse Gram</a></p>
+</article>
+<article class="ingredient-detail" id="peanuts">
+<svg class="site-icon ingredient-icon" aria-hidden="true" width="48" height="48"><use href="/assets/ingredients.svg#peanut"></use></svg>
+<h4>Peanuts</h4>
+<p><strong>Protein and fats</strong></p>
+<p><a href="/ingredients.html#peanuts">Read about Peanuts</a></p>
+</article>
+<article class="ingredient-detail" id="black-chana">
+<svg class="site-icon ingredient-icon" aria-hidden="true" width="48" height="48"><use href="/assets/ingredients.svg#bean"></use></svg>
+<h4>Chick Peas (Black Chana)</h4>
+<p><strong>Protein and fibre</strong></p>
+<p><a href="/ingredients.html#black-chana">Read about Chick Peas (Black Chana)</a></p>
+</article>
+<article class="ingredient-detail" id="urad-dal">
+<svg class="site-icon ingredient-icon" aria-hidden="true" width="48" height="48"><use href="/assets/ingredients.svg#bean"></use></svg>
+<h4>Urad Dal (Split Black Gram)</h4>
+<p><strong>Plant protein</strong></p>
+<p><a href="/ingredients.html#urad-dal">Read about Urad Dal (Split Black Gram)</a></p>
+</article>
+<article class="ingredient-detail" id="masoor-dal">
+<svg class="site-icon ingredient-icon" aria-hidden="true" width="48" height="48"><use href="/assets/ingredients.svg#bean"></use></svg>
+<h4>Masoor Dal (Lentils)</h4>
+<p><strong>Protein and fibre</strong></p>
+<p><a href="/ingredients.html#masoor-dal">Read about Masoor Dal (Lentils)</a></p>
+</article>
+<article class="ingredient-detail" id="moth-gram">
+<svg class="site-icon ingredient-icon" aria-hidden="true" width="48" height="48"><use href="/assets/ingredients.svg#bean"></use></svg>
+<h4>Moth Gram</h4>
+<p><strong>Plant protein</strong></p>
+<p><a href="/ingredients.html#moth-gram">Read about Moth Gram</a></p>
+</article>
+<article class="ingredient-detail" id="bengal-gram">
+<svg class="site-icon ingredient-icon" aria-hidden="true" width="48" height="48"><use href="/assets/ingredients.svg#bean"></use></svg>
+<h4>Split Bengal Gram (Chana Dal)</h4>
+<p><strong>Plant protein</strong></p>
+<p><a href="/ingredients.html#bengal-gram">Read about Split Bengal Gram (Chana Dal)</a></p>
+</article>
+</div>
 
-                <!-- Seeds Category (8 ingredients) -->
-                <div class="ingredient-category">
-                    <div class="flex items-center mb-8">
-                        <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-2xl flex items-center justify-center mr-4">
-                            <i class="fa-solid fa-seedling text-white text-xl"></i>
-                        </div>
-                        <div>
-                            <h3 class="text-2xl font-bold text-[#3a5a40] mb-1">Nutrient Seeds</h3>
-                            <p class="text-gray-600 text-sm">Powerhouse seeds packed with vitamins, minerals, and essential fatty acids</p>
-                        </div>
-                    </div>
-                    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4">
-                        <div class="ingredient-premium-card group bg-white p-6 rounded-3xl shadow-lg border border-green-100 hover:shadow-xl hover:border-green-200 transition-all duration-300">
-                            <div class="w-16 h-16 bg-gradient-to-br from-green-100 to-green-200 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                                <i class="fa-solid fa-seedling text-green-600 text-2xl"></i>
-                            </div>
-                            <h4 class="font-bold text-sm mb-2 text-[#3a5a40]">Pumpkin Seeds</h4>
-                            <p class="text-xs text-[#bc6c25] font-bold uppercase">Zinc Rich</p>
-                        </div>
-                        
-                        <div class="ingredient-premium-card group bg-white p-6 rounded-3xl shadow-lg border border-emerald-100 hover:shadow-xl hover:border-emerald-200 transition-all duration-300">
-                            <div class="w-16 h-16 bg-gradient-to-br from-emerald-100 to-emerald-200 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                                <i class="fa-solid fa-seedling text-emerald-600 text-2xl"></i>
-                            </div>
-                            <h4 class="font-bold text-sm mb-2 text-[#3a5a40]">Cucumber Seeds</h4>
-                            <p class="text-xs text-[#bc6c25] font-bold uppercase">Hydration</p>
-                        </div>
-                        
-                        <div class="ingredient-premium-card group bg-white p-6 rounded-3xl shadow-lg border border-yellow-100 hover:shadow-xl hover:border-yellow-200 transition-all duration-300">
-                            <div class="w-16 h-16 bg-gradient-to-br from-yellow-100 to-yellow-200 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                                <i class="fa-solid fa-sun text-yellow-600 text-2xl"></i>
-                            </div>
-                            <h4 class="font-bold text-sm mb-2 text-[#3a5a40]">Sunflower Seeds</h4>
-                            <p class="text-xs text-[#bc6c25] font-bold uppercase">Vitamin E</p>
-                        </div>
-                        
-                        <div class="ingredient-premium-card group bg-white p-6 rounded-3xl shadow-lg border border-red-100 hover:shadow-xl hover:border-red-200 transition-all duration-300">
-                            <div class="w-16 h-16 bg-gradient-to-br from-red-100 to-red-200 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                                <i class="fa-solid fa-seedling text-red-600 text-2xl"></i>
-                            </div>
-                            <h4 class="font-bold text-sm mb-2 text-[#3a5a40]">Watermelon Seeds</h4>
-                            <p class="text-xs text-[#bc6c25] font-bold uppercase">Magnesium</p>
-                        </div>
-                        
-                        <div class="ingredient-premium-card group bg-white p-6 rounded-3xl shadow-lg border border-purple-100 hover:shadow-xl hover:border-purple-200 transition-all duration-300">
-                            <div class="w-16 h-16 bg-gradient-to-br from-purple-100 to-purple-200 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                                <i class="fa-solid fa-seedling text-purple-600 text-2xl"></i>
-                            </div>
-                            <h4 class="font-bold text-sm mb-2 text-[#3a5a40]">Poppy Seeds</h4>
-                            <p class="text-xs text-[#bc6c25] font-bold uppercase">Calcium</p>
-                        </div>
-                        
-                        <div class="ingredient-premium-card group bg-white p-6 rounded-3xl shadow-lg border border-stone-100 hover:shadow-xl hover:border-stone-200 transition-all duration-300">
-                            <div class="w-16 h-16 bg-gradient-to-br from-stone-100 to-stone-200 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                                <i class="fa-solid fa-seedling text-stone-600 text-2xl"></i>
-                            </div>
-                            <h4 class="font-bold text-sm mb-2 text-[#3a5a40]">Til Sesame Seeds</h4>
-                            <p class="text-xs text-[#bc6c25] font-bold uppercase">Healthy Fats</p>
-                        </div>
-                        
-                        <div class="ingredient-premium-card group bg-white p-6 rounded-3xl shadow-lg border border-amber-100 hover:shadow-xl hover:border-amber-200 transition-all duration-300">
-                            <div class="w-16 h-16 bg-gradient-to-br from-amber-100 to-amber-200 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                                <i class="fa-solid fa-seedling text-amber-600 text-2xl"></i>
-                            </div>
-                            <h4 class="font-bold text-sm mb-2 text-[#3a5a40]">Fenugreek Seeds</h4>
-                            <p class="text-xs text-[#bc6c25] font-bold uppercase">Digestion</p>
-                        </div>
-                        
-                        <div class="ingredient-premium-card group bg-white p-6 rounded-3xl shadow-lg border border-brown-100 hover:shadow-xl hover:border-brown-200 transition-all duration-300">
-                            <div class="w-16 h-16 bg-gradient-to-br from-brown-100 to-brown-200 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                                <i class="fa-solid fa-seedling text-brown-600 text-2xl"></i>
-                            </div>
-                            <h4 class="font-bold text-sm mb-2 text-[#3a5a40]">Flax Seeds</h4>
-                            <p class="text-xs text-[#bc6c25] font-bold uppercase">Omega-3</p>
-                        </div>
-                    </div>
-                </div>
+<h3 class="category-title">Other cereals and starches (2)</h3>
+<div class="ingredient-grid">
+<article class="ingredient-detail" id="barley">
+<svg class="site-icon ingredient-icon" aria-hidden="true" width="48" height="48"><use href="/assets/ingredients.svg#grain"></use></svg>
+<h4>Barley (Barli)</h4>
+<p><strong>Carbohydrate and fibre</strong></p>
+<p><a href="/ingredients.html#barley">Read about Barley (Barli)</a></p>
+</article>
+<article class="ingredient-detail" id="sago">
+<svg class="site-icon ingredient-icon" aria-hidden="true" width="48" height="48"><use href="/assets/ingredients.svg#sago"></use></svg>
+<h4>Sago (Sabudana)</h4>
+<p><strong>Starch</strong></p>
+<p><a href="/ingredients.html#sago">Read about Sago (Sabudana)</a></p>
+</article>
+</div>
 
-                <!-- Legumes Category (26 ingredients) -->
-                <div class="ingredient-category">
-                    <div class="flex items-center mb-8">
-                        <div class="w-12 h-12 bg-gradient-to-br from-red-500 to-red-600 rounded-2xl flex items-center justify-center mr-4">
-                            <i class="fa-solid fa-dumbbell text-white text-xl"></i>
-                        </div>
-                        <div>
-                            <h3 class="text-2xl font-bold text-[#3a5a40] mb-1">Protein Legumes</h3>
-                            <p class="text-gray-600 text-sm">Complete protein sources with all essential amino acids and minerals</p>
-                        </div>
-                    </div>
-                    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-4">
-                        <!-- Row 1 -->
-                        <div class="ingredient-premium-card group bg-white p-4 rounded-2xl shadow-lg border border-green-100 hover:shadow-xl hover:border-green-200 transition-all duration-300">
-                            <div class="w-12 h-12 bg-gradient-to-br from-green-100 to-green-200 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
-                                <i class="fa-solid fa-leaf text-green-600 text-lg"></i>
-                            </div>
-                            <h4 class="font-bold text-xs mb-1 text-[#3a5a40]">Avare Bele</h4>
-                            <p class="text-[8px] text-[#bc6c25] font-bold uppercase">Protein</p>
-                        </div>
-                        
-                        <div class="ingredient-premium-card group bg-white p-4 rounded-2xl shadow-lg border border-yellow-100 hover:shadow-xl hover:border-yellow-200 transition-all duration-300">
-                            <div class="w-12 h-12 bg-gradient-to-br from-yellow-100 to-yellow-200 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
-                                <i class="fa-solid fa-seedling text-yellow-600 text-lg"></i>
-                            </div>
-                            <h4 class="font-bold text-xs mb-1 text-[#3a5a40]">Soya Beans</h4>
-                            <p class="text-[8px] text-[#bc6c25] font-bold uppercase">Complete Protein</p>
-                        </div>
-                        
-                        <div class="ingredient-premium-card group bg-white p-4 rounded-2xl shadow-lg border border-red-100 hover:shadow-xl hover:border-red-200 transition-all duration-300">
-                            <div class="w-12 h-12 bg-gradient-to-br from-red-100 to-red-200 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
-                                <i class="fa-solid fa-wheat-awn text-red-600 text-lg"></i>
-                            </div>
-                            <h4 class="font-bold text-xs mb-1 text-[#3a5a40]">Raagi (Finger Millet)</h4>
-                            <p class="text-[8px] text-[#bc6c25] font-bold uppercase">Calcium Rich</p>
-                        </div>
-                        
-                        <div class="ingredient-premium-card group bg-white p-4 rounded-2xl shadow-lg border border-orange-100 hover:shadow-xl hover:border-orange-200 transition-all duration-300">
-                            <div class="w-12 h-12 bg-gradient-to-br from-orange-100 to-orange-200 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
-                                <i class="fa-solid fa-seedling text-orange-600 text-lg"></i>
-                            </div>
-                            <h4 class="font-bold text-xs mb-1 text-[#3a5a40]">Kabul Gram</h4>
-                            <p class="text-[8px] text-[#bc6c25] font-bold uppercase">Fiber</p>
-                        </div>
-                        
-                        <div class="ingredient-premium-card group bg-white p-4 rounded-2xl shadow-lg border border-green-100 hover:shadow-xl hover:border-green-200 transition-all duration-300">
-                            <div class="w-12 h-12 bg-gradient-to-br from-green-100 to-green-200 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
-                                <i class="fa-solid fa-leaf text-green-600 text-lg"></i>
-                            </div>
-                            <h4 class="font-bold text-xs mb-1 text-[#3a5a40]">Green Gram</h4>
-                            <p class="text-[8px] text-[#bc6c25] font-bold uppercase">Protein</p>
-                        </div>
-                        
-                        <div class="ingredient-premium-card group bg-white p-4 rounded-2xl shadow-lg border border-stone-100 hover:shadow-xl hover:border-stone-200 transition-all duration-300">
-                            <div class="w-12 h-12 bg-gradient-to-br from-stone-100 to-stone-200 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
-                                <i class="fa-solid fa-seedling text-stone-600 text-lg"></i>
-                            </div>
-                            <h4 class="font-bold text-xs mb-1 text-[#3a5a40]">Bellar Dal White</h4>
-                            <p class="text-[8px] text-[#bc6c25] font-bold uppercase">Amino Acids</p>
-                        </div>
-                        
-                        <div class="ingredient-premium-card group bg-white p-4 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl hover:border-gray-200 transition-all duration-300">
-                            <div class="w-12 h-12 bg-gradient-to-br from-gray-100 to-gray-200 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
-                                <i class="fa-solid fa-leaf text-gray-600 text-lg"></i>
-                            </div>
-                            <h4 class="font-bold text-xs mb-1 text-[#3a5a40]">Cow Peas White</h4>
-                            <p class="text-[8px] text-[#bc6c25] font-bold uppercase">Folate</p>
-                        </div>
-                        
-                        <div class="ingredient-premium-card group bg-white p-4 rounded-2xl shadow-lg border border-amber-100 hover:shadow-xl hover:border-amber-200 transition-all duration-300">
-                            <div class="w-12 h-12 bg-gradient-to-br from-amber-100 to-amber-200 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
-                                <i class="fa-solid fa-leaf text-amber-600 text-lg"></i>
-                            </div>
-                            <h4 class="font-bold text-xs mb-1 text-[#3a5a40]">Cow Peas Brown</h4>
-                            <p class="text-[8px] text-[#bc6c25] font-bold uppercase">Iron</p>
-                        </div>
-                        
-                        <!-- Row 2 -->
-                        <div class="ingredient-premium-card group bg-white p-4 rounded-2xl shadow-lg border border-green-100 hover:shadow-xl hover:border-green-200 transition-all duration-300">
-                            <div class="w-12 h-12 bg-gradient-to-br from-green-100 to-green-200 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
-                                <i class="fa-solid fa-seedling text-green-600 text-lg"></i>
-                            </div>
-                            <h4 class="font-bold text-xs mb-1 text-[#3a5a40]">Green Peas</h4>
-                            <p class="text-[8px] text-[#bc6c25] font-bold uppercase">Vitamin K</p>
-                        </div>
-                        
-                        <div class="ingredient-premium-card group bg-white p-4 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl hover:border-gray-200 transition-all duration-300">
-                            <div class="w-12 h-12 bg-gradient-to-br from-gray-100 to-gray-200 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
-                                <i class="fa-solid fa-seedling text-gray-600 text-lg"></i>
-                            </div>
-                            <h4 class="font-bold text-xs mb-1 text-[#3a5a40]">White Peas</h4>
-                            <p class="text-[8px] text-[#bc6c25] font-bold uppercase">Protein</p>
-                        </div>
-                        
-                        <div class="ingredient-premium-card group bg-white p-4 rounded-2xl shadow-lg border border-slate-100 hover:shadow-xl hover:border-slate-200 transition-all duration-300">
-                            <div class="w-12 h-12 bg-gradient-to-br from-slate-100 to-slate-200 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
-                                <i class="fa-solid fa-leaf text-slate-600 text-lg"></i>
-                            </div>
-                            <h4 class="font-bold text-xs mb-1 text-[#3a5a40]">Black Urad</h4>
-                            <p class="text-[8px] text-[#bc6c25] font-bold uppercase">Protein Power</p>
-                        </div>
-                        
-                        <div class="ingredient-premium-card group bg-white p-4 rounded-2xl shadow-lg border border-amber-100 hover:shadow-xl hover:border-amber-200 transition-all duration-300">
-                            <div class="w-12 h-12 bg-gradient-to-br from-amber-100 to-amber-200 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
-                                <i class="fa-solid fa-seedling text-amber-600 text-lg"></i>
-                            </div>
-                            <h4 class="font-bold text-xs mb-1 text-[#3a5a40]">Barli Rice</h4>
-                            <p class="text-[8px] text-[#bc6c25] font-bold uppercase">Energy</p>
-                        </div>
-                        
-                        <div class="ingredient-premium-card group bg-white p-4 rounded-2xl shadow-lg border border-slate-100 hover:shadow-xl hover:border-slate-200 transition-all duration-300">
-                            <div class="w-12 h-12 bg-gradient-to-br from-slate-100 to-slate-200 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
-                                <i class="fa-solid fa-circle text-slate-600 text-lg"></i>
-                            </div>
-                            <h4 class="font-bold text-xs mb-1 text-[#3a5a40]">Sago Rice</h4>
-                            <p class="text-[8px] text-[#bc6c25] font-bold uppercase">Carbs</p>
-                        </div>
-                        
-                        <div class="ingredient-premium-card group bg-white p-4 rounded-2xl shadow-lg border border-red-100 hover:shadow-xl hover:border-red-200 transition-all duration-300">
-                            <div class="w-12 h-12 bg-gradient-to-br from-red-100 to-red-200 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
-                                <i class="fa-solid fa-seedling text-red-600 text-lg"></i>
-                            </div>
-                            <h4 class="font-bold text-xs mb-1 text-[#3a5a40]">Rajma White</h4>
-                            <p class="text-[8px] text-[#bc6c25] font-bold uppercase">Protein</p>
-                        </div>
-                        
-                        <div class="ingredient-premium-card group bg-white p-4 rounded-2xl shadow-lg border border-red-100 hover:shadow-xl hover:border-red-200 transition-all duration-300">
-                            <div class="w-12 h-12 bg-gradient-to-br from-red-100 to-red-200 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
-                                <i class="fa-solid fa-seedling text-red-700 text-lg"></i>
-                            </div>
-                            <h4 class="font-bold text-xs mb-1 text-[#3a5a40]">Kidney Beans Red</h4>
-                            <p class="text-[8px] text-[#bc6c25] font-bold uppercase">Iron Rich</p>
-                        </div>
-                        
-                        <div class="ingredient-premium-card group bg-white p-4 rounded-2xl shadow-lg border border-amber-100 hover:shadow-xl hover:border-amber-200 transition-all duration-300">
-                            <div class="w-12 h-12 bg-gradient-to-br from-amber-100 to-amber-200 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
-                                <i class="fa-solid fa-seedling text-amber-700 text-lg"></i>
-                            </div>
-                            <h4 class="font-bold text-xs mb-1 text-[#3a5a40]">Kidney Beans Brown</h4>
-                            <p class="text-[8px] text-[#bc6c25] font-bold uppercase">Fiber</p>
-                        </div>
-                        
-                        <!-- Row 3 -->
-                        <div class="ingredient-premium-card group bg-white p-4 rounded-2xl shadow-lg border border-brown-100 hover:shadow-xl hover:border-brown-200 transition-all duration-300">
-                            <div class="w-12 h-12 bg-gradient-to-br from-brown-100 to-brown-200 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
-                                <i class="fa-solid fa-shield-halved text-brown-600 text-lg"></i>
-                            </div>
-                            <h4 class="font-bold text-xs mb-1 text-[#3a5a40]">Horse Gram</h4>
-                            <p class="text-[8px] text-[#bc6c25] font-bold uppercase">Protein Plus</p>
-                        </div>
-                        
-                        <div class="ingredient-premium-card group bg-white p-4 rounded-2xl shadow-lg border border-amber-100 hover:shadow-xl hover:border-amber-200 transition-all duration-300">
-                            <div class="w-12 h-12 bg-gradient-to-br from-amber-100 to-amber-200 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
-                                <i class="fa-solid fa-nut text-amber-600 text-lg"></i>
-                            </div>
-                            <h4 class="font-bold text-xs mb-1 text-[#3a5a40]">Peanuts</h4>
-                            <p class="text-[8px] text-[#bc6c25] font-bold uppercase">Healthy Fats</p>
-                        </div>
-                        
-                        <div class="ingredient-premium-card group bg-white p-4 rounded-2xl shadow-lg border border-slate-100 hover:shadow-xl hover:border-slate-200 transition-all duration-300">
-                            <div class="w-12 h-12 bg-gradient-to-br from-slate-100 to-slate-200 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
-                                <i class="fa-solid fa-seedling text-slate-600 text-lg"></i>
-                            </div>
-                            <h4 class="font-bold text-xs mb-1 text-[#3a5a40]">Chick Peas (Black Chana)</h4>
-                            <p class="text-[8px] text-[#bc6c25] font-bold uppercase">Protein</p>
-                        </div>
-                        
-                        <div class="ingredient-premium-card group bg-white p-4 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl hover:border-gray-200 transition-all duration-300">
-                            <div class="w-12 h-12 bg-gradient-to-br from-gray-100 to-gray-200 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
-                                <i class="fa-solid fa-leaf text-gray-700 text-lg"></i>
-                            </div>
-                            <h4 class="font-bold text-xs mb-1 text-[#3a5a40]">Urad Dal</h4>
-                            <p class="text-[8px] text-[#bc6c25] font-bold uppercase">Protein</p>
-                        </div>
-                        
-                        <div class="ingredient-premium-card group bg-white p-4 rounded-2xl shadow-lg border border-red-100 hover:shadow-xl hover:border-red-200 transition-all duration-300">
-                            <div class="w-12 h-12 bg-gradient-to-br from-red-100 to-red-200 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
-                                <i class="fa-solid fa-seedling text-red-600 text-lg"></i>
-                            </div>
-                            <h4 class="font-bold text-xs mb-1 text-[#3a5a40]">Masoor Dal</h4>
-                            <p class="text-[8px] text-[#bc6c25] font-bold uppercase">Iron Rich</p>
-                        </div>
-                        
-                        <div class="ingredient-premium-card group bg-white p-4 rounded-2xl shadow-lg border border-green-100 hover:shadow-xl hover:border-green-200 transition-all duration-300">
-                            <div class="w-12 h-12 bg-gradient-to-br from-green-100 to-green-200 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
-                                <i class="fa-solid fa-leaf text-green-700 text-lg"></i>
-                            </div>
-                            <h4 class="font-bold text-xs mb-1 text-[#3a5a40]">Moth Gram</h4>
-                            <p class="text-[8px] text-[#bc6c25] font-bold uppercase">Minerals</p>
-                        </div>
-                        
-                        <div class="ingredient-premium-card group bg-white p-4 rounded-2xl shadow-lg border border-yellow-100 hover:shadow-xl hover:border-yellow-200 transition-all duration-300">
-                            <div class="w-12 h-12 bg-gradient-to-br from-yellow-100 to-yellow-200 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
-                                <i class="fa-solid fa-seedling text-yellow-700 text-lg"></i>
-                            </div>
-                            <h4 class="font-bold text-xs mb-1 text-[#3a5a40]">Split Bengal Gram</h4>
-                            <p class="text-[8px] text-[#bc6c25] font-bold uppercase">Fiber</p>
-                        </div>
-                        
-                        <div class="ingredient-premium-card group bg-white p-4 rounded-2xl shadow-lg border border-amber-100 hover:shadow-xl hover:border-amber-200 transition-all duration-300">
-                            <div class="w-12 h-12 bg-gradient-to-br from-amber-100 to-amber-200 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
-                                <i class="fa-solid fa-wheat-awn text-amber-700 text-lg"></i>
-                            </div>
-                            <h4 class="font-bold text-xs mb-1 text-[#3a5a40]">Jowar</h4>
-                            <p class="text-[8px] text-[#bc6c25] font-bold uppercase">Gluten Free</p>
-                        </div>
-                        
-                        <!-- Row 4 (Spices) -->
-                        <div class="ingredient-premium-card group bg-white p-4 rounded-2xl shadow-lg border border-green-100 hover:shadow-xl hover:border-green-200 transition-all duration-300">
-                            <div class="w-12 h-12 bg-gradient-to-br from-green-100 to-green-200 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
-                                <i class="fa-solid fa-leaf text-green-600 text-lg"></i>
-                            </div>
-                            <h4 class="font-bold text-xs mb-1 text-[#3a5a40]">Elachi (Cardamom)</h4>
-                            <p class="text-[8px] text-[#bc6c25] font-bold uppercase">Digestion</p>
-                        </div>
-                        
-                        <div class="ingredient-premium-card group bg-white p-4 rounded-2xl shadow-lg border border-brown-100 hover:shadow-xl hover:border-brown-200 transition-all duration-300">
-                            <div class="w-12 h-12 bg-gradient-to-br from-brown-100 to-brown-200 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
-                                <i class="fa-solid fa-seedling text-brown-700 text-lg"></i>
-                            </div>
-                            <h4 class="font-bold text-xs mb-1 text-[#3a5a40]">Jeera (Cumin Seeds)</h4>
-                            <p class="text-[8px] text-[#bc6c25] font-bold uppercase">Antioxidants</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Call to Action -->
-            <div class="mt-20 text-center">
-                <div class="bg-gradient-to-r from-[#3a5a40] to-[#2d4531] p-12 rounded-[4rem] shadow-2xl border border-white/20">
-                    <h3 class="text-3xl font-bold text-white mb-4">Complete Nutritional Profile</h3>
-                    <p class="text-white/90 text-lg mb-8 max-w-2xl mx-auto">
-                        Every ingredient works in harmony to provide complete nutrition - from essential amino acids to vital minerals and antioxidants.
-                    </p>
-                    <a href="#process" class="inline-flex items-center px-8 py-4 bg-white text-[#3a5a40] rounded-2xl font-bold hover:bg-gray-50 transition-colors space-x-3">
-                        <span>Discover Our Process</span>
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Crafting -->
-    <section id="process" class="py-32 bg-white">
-        <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-5xl font-bold serif text-[#3a5a40] mb-16 text-center">The Crafting Cycle</h2>
-            <div class="grid md:grid-cols-5 gap-8">
-                <div class="process-card text-center"><div class="process-dot w-24 h-24 bg-[#fefae0] rounded-[2rem] flex items-center justify-center mx-auto mb-8 shadow-inner shadow-[#bc6c25]/10"><i class="fa-solid fa-leaf text-3xl text-[#bc6c25]"></i></div><h3 class="font-bold text-lg mb-4 text-[#3a5a40]">Sourcing</h3><p class="text-base leading-relaxed text-gray-700 px-3 font-normal tracking-wide">We carefully select premium quality grains, millets, seeds, and cereals from trusted organic farmers across India.</p></div>
-                <div class="process-card text-center"><div class="process-dot w-24 h-24 bg-[#fefae0] rounded-[2rem] flex items-center justify-center mx-auto mb-8 shadow-inner shadow-[#bc6c25]/10"><i class="fa-solid fa-filter text-3xl text-[#bc6c25]"></i></div><h3 class="font-bold text-lg mb-4 text-[#3a5a40]">Cleaning & Sorting</h3><p class="text-base leading-relaxed text-gray-700 px-3 font-normal tracking-wide">Each ingredient undergoes thorough cleaning and quality inspection to ensure only the best make it into our blend.</p></div>
-                <div class="process-card text-center"><div class="process-dot w-24 h-24 bg-[#fefae0] rounded-[2rem] flex items-center justify-center mx-auto mb-8 shadow-inner shadow-[#bc6c25]/10"><i class="fa-solid fa-fire text-3xl text-[#bc6c25]"></i></div><h3 class="font-bold text-lg mb-4 text-[#3a5a40]">Traditional Roasting</h3><p class="text-base leading-relaxed text-gray-700 px-3 font-normal tracking-wide">Using time-honored techniques, we carefully roast each ingredient to enhance flavor and unlock maximum nutrition.</p></div>
-                <div class="process-card text-center"><div class="process-dot w-24 h-24 bg-[#fefae0] rounded-[2rem] flex items-center justify-center mx-auto mb-8 shadow-inner shadow-[#bc6c25]/10"><i class="fa-solid fa-mortar-pestle text-3xl text-[#bc6c25]"></i></div><h3 class="font-bold text-lg mb-4 text-[#3a5a40]">Perfect Blending</h3><p class="text-base leading-relaxed text-gray-700 px-3 font-normal tracking-wide">Our master recipe combines all 42 ingredients in precise proportions for optimal taste and nutritional balance.</p></div>
-                <div class="process-card text-center"><div class="process-dot w-24 h-24 bg-[#fefae0] rounded-[2rem] flex items-center justify-center mx-auto mb-8 shadow-inner shadow-[#bc6c25]/10"><i class="fa-solid fa-box text-3xl text-[#bc6c25]"></i></div><h3 class="font-bold text-lg mb-4 text-[#3a5a40]">Fresh Packaging</h3><p class="text-base leading-relaxed text-gray-700 px-3 font-normal tracking-wide">Each batch is immediately packed in air-tight containers to preserve freshness and deliver farm-to-table quality.</p></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Usage -->
-    <section id="usage" class="py-32 bg-[#3a5a40] text-white">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="grid lg:grid-cols-2 gap-20 items-center">
-                <div class="reveal">
-                    <h2 class="text-5xl font-bold serif mb-10 leading-tight">Effortless <br>Daily Nourishment</h2>
-                    <div class="space-y-10">
-                        <div class="flex items-start space-x-6"><span class="text-4xl font-serif text-[#bc6c25] opacity-50">01</span><div><h4 class="text-xl font-bold mb-2">The Base</h4><p class="text-gray-300">Mix 2 scoops with milk or water. Stir it to avoid lumps.</p></div></div>
-                        <div class="flex items-start space-x-6"><span class="text-4xl font-serif text-[#bc6c25] opacity-50">02</span><div><h4 class="text-xl font-bold mb-2">The Warmth</h4><p class="text-gray-300">Whisk on low flame for 3 minutes.</p></div></div>
-                    </div>
-                </div>
-                <div class="aspect-square bg-[#a3b18a] rounded-[4rem] flex items-center justify-center p-12 shadow-2xl overflow-hidden">
-                    <img src="FULL-logo.jpg" alt="Preparation Visual" class="w-full h-full object-cover rounded-[3rem] opacity-90 shadow-lg">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="py-32 bg-gradient-to-br from-[#f8f6f0] to-white relative overflow-hidden">
-        <!-- Background Pattern -->
-        <div class="absolute inset-0 opacity-5">
-            <div class="absolute top-20 left-20 w-32 h-32 bg-[#3a5a40] rounded-full blur-3xl"></div>
-            <div class="absolute bottom-20 right-20 w-40 h-40 bg-[#3a5a40] rounded-full blur-3xl"></div>
-        </div>
-        
-        <div class="max-w-7xl mx-auto px-6 relative z-10">
-            <!-- Header Section -->
-            <div class="text-center mb-16">
-                <div class="inline-flex items-center px-4 py-2 bg-[#3a5a40]/10 rounded-full mb-4">
-                    <span class="text-[#3a5a40] text-xs font-bold uppercase tracking-wider">Let's Connect</span>
-                </div>
-                <h2 class="text-4xl font-bold serif text-[#3a5a40] mb-4 leading-tight">Ready for a <span class="text-[#2d4531]">Healthier You?</span></h2>
-            </div>
-
-            <!-- Main Contact Grid -->
-            <div class="grid lg:grid-cols-3 gap-8 mb-20">
-                <!-- Contact Methods -->
-                <div class="lg:col-span-1">
-                    <div class="bg-white p-8 rounded-3xl shadow-xl shadow-[#3a5a40]/5 border border-stone-100 h-full">
-                        <div class="text-center mb-8">
-                            <div class="w-16 h-16 bg-gradient-to-br from-[#3a5a40] to-[#2d4531] rounded-2xl flex items-center justify-center mx-auto mb-4">
-                                <i class="fa-solid fa-heart text-white text-2xl"></i>
-                            </div>
-                            <h3 class="text-2xl font-bold text-[#3a5a40] mb-2">Get In Touch</h3>
-                            <p class="text-gray-600 text-sm">Choose your preferred way to connect</p>
-                        </div>
-                        
-                        <!-- Contact Options -->
-                        <div class="space-y-4">
-                            <a href="https://wa.me/919148109589" target="_blank" class="group flex items-center p-4 bg-gradient-to-r from-green-50 to-green-100/50 rounded-2xl hover:shadow-lg hover:shadow-green-200/30 transition-all duration-300 transform hover:-translate-y-1">
-                                <div class="w-12 h-12 bg-green-500 rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform">
-                                    <i class="fa-brands fa-whatsapp text-white text-xl"></i>
-                                </div>
-                                <div class="flex-grow">
-                                    <p class="font-bold text-[#3a5a40] text-sm">WhatsApp</p>
-                                    <p class="text-gray-600 text-xs">+91 91481 09589</p>
-                                </div>
-                                <i class="fa-solid fa-arrow-right text-green-600 opacity-0 group-hover:opacity-100 transition-opacity"></i>
-                            </a>
-                            
-                            <a href="tel:+919148109589" class="group flex items-center p-4 bg-gradient-to-r from-blue-50 to-blue-100/50 rounded-2xl hover:shadow-lg hover:shadow-blue-200/30 transition-all duration-300 transform hover:-translate-y-1">
-                                <div class="w-12 h-12 bg-blue-500 rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform">
-                                    <i class="fa-solid fa-phone text-white text-xl"></i>
-                                </div>
-                                <div class="flex-grow">
-                                    <p class="font-bold text-[#3a5a40] text-sm">Call Direct</p>
-                                    <p class="text-gray-600 text-xs">+91 91481 09589</p>
-                                </div>
-                                <i class="fa-solid fa-arrow-right text-blue-600 opacity-0 group-hover:opacity-100 transition-opacity"></i>
-                            </a>
-                            
-                            <a href="https://instagram.com/mirthu_poshan" target="_blank" class="group flex items-center p-4 bg-gradient-to-r from-pink-50 to-pink-100/50 rounded-2xl hover:shadow-lg hover:shadow-pink-200/30 transition-all duration-300 transform hover:-translate-y-1">
-                                <div class="w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-500 rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform">
-                                    <i class="fa-brands fa-instagram text-white text-xl"></i>
-                                </div>
-                                <div class="flex-grow">
-                                    <p class="font-bold text-[#3a5a40] text-sm">Follow Us</p>
-                                    <p class="text-gray-600 text-xs">@mirthu_poshan</p>
-                                </div>
-                                <i class="fa-solid fa-arrow-right text-pink-600 opacity-0 group-hover:opacity-100 transition-opacity"></i>
-                            </a>
-                        </div>
-                        
-                        <!-- Address Section -->
-                        <div class="mt-8 pt-6 border-t border-stone-200">
-                            <div class="flex items-start">
-                                <div class="w-10 h-10 bg-[#3a5a40]/10 rounded-xl flex items-center justify-center mr-3 mt-1">
-                                    <i class="fa-solid fa-location-dot text-[#3a5a40] text-lg"></i>
-                                </div>
-                                <div>
-                                    <p class="font-bold text-[#3a5a40] text-sm mb-1">Our Studio</p>
-                                    <address class="text-gray-600 text-sm not-italic leading-relaxed">
-                                        9-196 Kaluvadi Post Mayyadi<br>
+<h3 class="category-title">Spices (2)</h3>
+<div class="ingredient-grid">
+<article class="ingredient-detail" id="cardamom">
+<svg class="site-icon ingredient-icon" aria-hidden="true" width="48" height="48"><use href="/assets/ingredients.svg#cardamom"></use></svg>
+<h4>Elachi (Cardamom)</h4>
+<p><strong>Aromatic spice</strong></p>
+<p><a href="/ingredients.html#cardamom">Read about Elachi (Cardamom)</a></p>
+</article>
+<article class="ingredient-detail" id="cumin">
+<svg class="site-icon ingredient-icon" aria-hidden="true" width="48" height="48"><use href="/assets/ingredients.svg#cumin"></use></svg>
+<h4>Jeera (Cumin Seeds)</h4>
+<p><strong>Aromatic spice</strong></p>
+<p><a href="/ingredients.html#cumin">Read about Jeera (Cumin Seeds)</a></p>
+</article>
+</div>
+<!-- INGREDIENTS:END -->
+<p class="mt-10"><a class="btn-primary inline-block px-8 py-4 rounded-2xl font-bold" href="/ingredients.html">Read the ingredient guide and sources</a></p>
+</div></section><section class="py-32 bg-white" id="process">
+<div class="max-w-7xl mx-auto px-6">
+<h2 class="text-5xl font-bold serif text-[#3a5a40] mb-16 text-center">The Crafting Cycle</h2>
+<div class="grid md:grid-cols-5 gap-8">
+<div class="process-card text-center"><div class="process-dot w-24 h-24 bg-[#fefae0] rounded-[2rem] flex items-center justify-center mx-auto mb-8 shadow-inner shadow-[#bc6c25]/10"><svg aria-hidden="true" class="site-icon text-3xl text-[#bc6c25]" height="24" width="24"><use href="/assets/icons.svg#leaf"></use></svg></div><h3 class="font-bold text-lg mb-4 text-[#3a5a40]">Sourcing</h3><p class="text-base leading-relaxed text-gray-700 px-3 font-normal tracking-wide">We carefully select premium quality grains, millets, seeds, and cereals from trusted organic farmers across India.</p></div>
+<div class="process-card text-center"><div class="process-dot w-24 h-24 bg-[#fefae0] rounded-[2rem] flex items-center justify-center mx-auto mb-8 shadow-inner shadow-[#bc6c25]/10"><svg aria-hidden="true" class="site-icon text-3xl text-[#bc6c25]" height="24" width="24"><use href="/assets/icons.svg#filter"></use></svg></div><h3 class="font-bold text-lg mb-4 text-[#3a5a40]">Cleaning &amp; Sorting</h3><p class="text-base leading-relaxed text-gray-700 px-3 font-normal tracking-wide">Each ingredient undergoes thorough cleaning and quality inspection to ensure only the best make it into our blend.</p></div>
+<div class="process-card text-center"><div class="process-dot w-24 h-24 bg-[#fefae0] rounded-[2rem] flex items-center justify-center mx-auto mb-8 shadow-inner shadow-[#bc6c25]/10"><svg aria-hidden="true" class="site-icon text-3xl text-[#bc6c25]" height="24" width="24"><use href="/assets/icons.svg#fire"></use></svg></div><h3 class="font-bold text-lg mb-4 text-[#3a5a40]">Traditional Roasting</h3><p class="text-base leading-relaxed text-gray-700 px-3 font-normal tracking-wide">We roast ingredients to develop their flavour before blending.</p></div>
+<div class="process-card text-center"><div class="process-dot w-24 h-24 bg-[#fefae0] rounded-[2rem] flex items-center justify-center mx-auto mb-8 shadow-inner shadow-[#bc6c25]/10"><svg aria-hidden="true" class="site-icon text-3xl text-[#bc6c25]" height="24" width="24"><use href="/assets/icons.svg#mortar-pestle"></use></svg></div><h3 class="font-bold text-lg mb-4 text-[#3a5a40]">Perfect Blending</h3><p class="text-base leading-relaxed text-gray-700 px-3 font-normal tracking-wide">Our recipe brings together 42 listed ingredients in a homemade malt flour.</p></div>
+<div class="process-card text-center"><div class="process-dot w-24 h-24 bg-[#fefae0] rounded-[2rem] flex items-center justify-center mx-auto mb-8 shadow-inner shadow-[#bc6c25]/10"><svg aria-hidden="true" class="site-icon text-3xl text-[#bc6c25]" height="24" width="24"><use href="/assets/icons.svg#box"></use></svg></div><h3 class="font-bold text-lg mb-4 text-[#3a5a40]">Fresh Packaging</h3><p class="text-base leading-relaxed text-gray-700 px-3 font-normal tracking-wide">Each batch is immediately packed in air-tight containers to preserve freshness and deliver farm-to-table quality.</p></div>
+</div>
+</div>
+</section><section class="py-32 bg-[#3a5a40] text-white" id="usage">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid lg:grid-cols-2 gap-20 items-center">
+<div class="reveal">
+<h2 class="text-5xl font-bold serif mb-10 leading-tight">Effortless <br/>Daily Nourishment</h2>
+<div class="space-y-10">
+<div class="flex items-start space-x-6"><span class="text-4xl font-serif text-[#fefae0]">01</span><div><h3 class="text-xl font-bold mb-2">The Base</h3><p class="text-gray-300">Follow the preparation instructions on your pack. Mix with milk or water as directed and stir to avoid lumps.</p></div></div>
+<div class="flex items-start space-x-6"><span class="text-4xl font-serif text-[#fefae0]">02</span><div><h3 class="text-xl font-bold mb-2">The Warmth</h3><p class="text-gray-300">Cook according to your pack instructions before serving. Contact us if you need preparation guidance.</p></div></div>
+</div>
+</div>
+<div class="aspect-square bg-[#a3b18a] rounded-[4rem] flex items-center justify-center p-12 shadow-2xl overflow-hidden">
+<img alt="Mirthu Poshan product label" class="w-full h-full object-cover rounded-[3rem] opacity-90 shadow-lg" decoding="async" height="769" loading="lazy" src="/assets/preparation.webp" width="1000"/>
+</div>
+</div>
+</div>
+</section><section class="py-32 bg-gradient-to-br from-[#f8f6f0] to-white relative overflow-hidden" id="contact">
+<!-- Background Pattern -->
+<div class="absolute inset-0 opacity-5">
+<div class="absolute top-20 left-20 w-32 h-32 bg-[#3a5a40] rounded-full blur-3xl"></div>
+<div class="absolute bottom-20 right-20 w-40 h-40 bg-[#3a5a40] rounded-full blur-3xl"></div>
+</div>
+<div class="max-w-7xl mx-auto px-6 relative z-10">
+<!-- Header Section -->
+<div class="text-center mb-16">
+<div class="inline-flex items-center px-4 py-2 bg-[#3a5a40]/10 rounded-full mb-4">
+<span class="text-[#3a5a40] text-xs font-bold uppercase tracking-wider">Let's Connect</span>
+</div>
+<h2 class="text-4xl font-bold serif text-[#3a5a40] mb-4 leading-tight">Ready for a <span class="text-[#2d4531]">Healthier You?</span></h2>
+</div>
+<!-- Main Contact Grid -->
+<div class="grid lg:grid-cols-3 gap-8 mb-20">
+<!-- Contact Methods -->
+<div class="lg:col-span-1">
+<div class="bg-white p-8 rounded-3xl shadow-xl shadow-[#3a5a40]/5 border border-stone-100 h-full">
+<div class="text-center mb-8">
+<div class="w-16 h-16 bg-gradient-to-br from-[#3a5a40] to-[#2d4531] rounded-2xl flex items-center justify-center mx-auto mb-4">
+<svg aria-hidden="true" class="site-icon text-white text-2xl" height="24" width="24"><use href="/assets/icons.svg#heart"></use></svg>
+</div>
+<h3 class="text-2xl font-bold text-[#3a5a40] mb-2">Get In Touch</h3>
+<p class="text-gray-600 text-sm">Choose your preferred way to connect</p>
+</div>
+<!-- Contact Options -->
+<div class="space-y-4">
+<a class="group flex items-center p-4 bg-gradient-to-r from-green-50 to-green-100/50 rounded-2xl hover:shadow-lg hover:shadow-green-200/30 transition-all duration-300 transform hover:-translate-y-1" href="https://wa.me/919148109589" rel="noopener noreferrer" target="_blank">
+<div class="w-12 h-12 bg-green-500 rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform">
+<svg aria-hidden="true" class="site-icon text-white text-xl" height="24" width="24"><use href="/assets/icons.svg#whatsapp"></use></svg>
+</div>
+<div class="flex-grow">
+<p class="font-bold text-[#3a5a40] text-sm">WhatsApp</p>
+<p class="text-gray-600 text-xs">+91 91481 09589</p>
+</div>
+<svg aria-hidden="true" class="site-icon text-green-600 opacity-0 group-hover:opacity-100 transition-opacity" height="24" width="24"><use href="/assets/icons.svg#arrow-right"></use></svg>
+</a>
+<a class="group flex items-center p-4 bg-gradient-to-r from-blue-50 to-blue-100/50 rounded-2xl hover:shadow-lg hover:shadow-blue-200/30 transition-all duration-300 transform hover:-translate-y-1" href="tel:+919148109589">
+<div class="w-12 h-12 bg-blue-500 rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform">
+<svg aria-hidden="true" class="site-icon text-white text-xl" height="24" width="24"><use href="/assets/icons.svg#phone"></use></svg>
+</div>
+<div class="flex-grow">
+<p class="font-bold text-[#3a5a40] text-sm">Call Direct</p>
+<p class="text-gray-600 text-xs">+91 91481 09589</p>
+</div>
+<svg aria-hidden="true" class="site-icon text-blue-600 opacity-0 group-hover:opacity-100 transition-opacity" height="24" width="24"><use href="/assets/icons.svg#arrow-right"></use></svg>
+</a>
+<a class="group flex items-center p-4 bg-gradient-to-r from-pink-50 to-pink-100/50 rounded-2xl hover:shadow-lg hover:shadow-pink-200/30 transition-all duration-300 transform hover:-translate-y-1" href="https://instagram.com/mirthu_poshan" rel="noopener noreferrer" target="_blank">
+<div class="w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-500 rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform">
+<svg aria-hidden="true" class="site-icon text-white text-xl" height="24" width="24"><use href="/assets/icons.svg#instagram"></use></svg>
+</div>
+<div class="flex-grow">
+<p class="font-bold text-[#3a5a40] text-sm">Follow Us</p>
+<p class="text-gray-600 text-xs">@mirthu_poshan</p>
+</div>
+<svg aria-hidden="true" class="site-icon text-pink-600 opacity-0 group-hover:opacity-100 transition-opacity" height="24" width="24"><use href="/assets/icons.svg#arrow-right"></use></svg>
+</a>
+</div>
+<!-- Address Section -->
+<div class="mt-8 pt-6 border-t border-stone-200">
+<div class="flex items-start">
+<div class="w-10 h-10 bg-[#3a5a40]/10 rounded-xl flex items-center justify-center mr-3 mt-1">
+<svg aria-hidden="true" class="site-icon text-[#3a5a40] text-lg" height="24" width="24"><use href="/assets/icons.svg#location-dot"></use></svg>
+</div>
+<div>
+<p class="font-bold text-[#3a5a40] text-sm mb-1">Our Studio</p>
+<address class="text-gray-600 text-sm not-italic leading-relaxed">
+                                        9-196 Kaluvadi Post Mayyadi<br/>
                                         Byndoor - 576214
                                         Karnataka, India
                                     </address>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Contact Form -->
+<div class="lg:col-span-2">
+<div class="bg-white p-10 rounded-3xl shadow-xl shadow-[#3a5a40]/5 border border-stone-100 h-full">
+<div class="mb-8">
+<h3 class="text-3xl font-bold text-[#3a5a40] mb-3">Send us a Message</h3>
+<p class="text-gray-600">Fill out the form below and we'll get back to you within 24 hours</p>
+</div>
+<form action="https://api.web3forms.com/submit" aria-describedby="contact-privacy" class="space-y-6" id="contactForm" method="POST">
+<!-- Web3Forms Configuration -->
+<input name="access_key" type="hidden" value="63ceabbb-3d09-4545-800d-996ce5d3bc90"/>
+<input name="subject" type="hidden" value="New Contact Form Submission from Mirthu Poshan Website"/>
+<input name="from_name" type="hidden" value="Mirthu Poshan Contact Form"/>
 
-                <!-- Contact Form -->
-                <div class="lg:col-span-2">
-                    <div class="bg-white p-10 rounded-3xl shadow-xl shadow-[#3a5a40]/5 border border-stone-100 h-full">
-                        <div class="mb-8">
-                            <h3 class="text-3xl font-bold text-[#3a5a40] mb-3">Send us a Message</h3>
-                            <p class="text-gray-600">Fill out the form below and we'll get back to you within 24 hours</p>
-                        </div>
-                        
-                        <form id="contactForm" action="https://api.web3forms.com/submit" method="POST" class="space-y-6">
-                            <!-- Web3Forms Configuration -->
-                            <input type="hidden" name="access_key" value="63ceabbb-3d09-4545-800d-996ce5d3bc90">
-                            <input type="hidden" name="subject" value="New Contact Form Submission from Mirthu Poshan Website">
-                            <input type="hidden" name="from_name" value="Mirthu Poshan Contact Form">
-                            <input type="hidden" name="redirect" value="false">
-                            
-                            <div class="grid md:grid-cols-2 gap-6">
-                                <div class="group">
-                                    <label class="text-xs font-bold uppercase tracking-wider text-[#3a5a40] mb-3 block group-focus-within:text-[#2d4531]">Full Name *</label>
-                                    <input type="text" name="name" id="name" class="w-full bg-gray-50 border-2 border-gray-200 rounded-xl py-4 px-5 focus:outline-none focus:border-[#3a5a40] focus:bg-white transition-all duration-300" placeholder="Enter your full name" required>
-                                </div>
-                                <div class="group">
-                                    <label class="text-xs font-bold uppercase tracking-wider text-[#3a5a40] mb-3 block group-focus-within:text-[#2d4531]">Email Address *</label>
-                                    <input type="email" name="email" id="email" class="w-full bg-gray-50 border-2 border-gray-200 rounded-xl py-4 px-5 focus:outline-none focus:border-[#3a5a40] focus:bg-white transition-all duration-300" placeholder="your@email.com" required>
-                                </div>
-                            </div>
-                            <div class="group">
-                                <label class="text-xs font-bold uppercase tracking-wider text-[#3a5a40] mb-3 block group-focus-within:text-[#2d4531]">Phone Number *</label>
-                                <input type="tel" name="phone" id="phone" class="w-full bg-gray-50 border-2 border-gray-200 rounded-xl py-4 px-5 focus:outline-none focus:border-[#3a5a40] focus:bg-white transition-all duration-300" placeholder="+91 XXXXX XXXXX" required>
-                            </div>
-                            <div class="group">
-                                <label class="text-xs font-bold uppercase tracking-wider text-[#3a5a40] mb-3 block group-focus-within:text-[#2d4531]">Message</label>
-                                <textarea name="message" id="message" rows="4" class="w-full bg-gray-50 border-2 border-gray-200 rounded-xl py-4 px-5 focus:outline-none focus:border-[#3a5a40] focus:bg-white transition-all duration-300 resize-none" placeholder="Tell us about your health goals or any questions you have..."></textarea>
-                            </div>
-                            
-                            <button type="submit" id="sendButton" class="group w-full bg-gradient-to-r from-[#3a5a40] to-[#2d4531] text-white py-5 px-8 rounded-2xl font-bold text-lg uppercase tracking-wider hover:shadow-xl hover:shadow-[#3a5a40]/30 transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center space-x-3">
-                                <span>Send Message</span>
-                                <i class="fa-solid fa-paper-plane group-hover:translate-x-1 transition-transform"></i>
-                            </button>
-                            
-                            <p class="text-xs text-gray-500 text-center mt-4">
-                                <i class="fa-solid fa-shield-alt mr-1"></i>
-                                Your information is secure and will never be shared with third parties
-                            </p>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Trust Indicators -->
-            <div class="bg-white/80 backdrop-blur-sm p-8 rounded-3xl border border-stone-200 shadow-lg">
-                <div class="grid md:grid-cols-3 gap-8 text-center">
-                    <div class="group">
-                        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-green-200 transition-colors">
-                            <i class="fa-solid fa-clock text-green-600 text-2xl"></i>
-                        </div>
-                        <h4 class="font-bold text-[#3a5a40] mb-2">Quick Response</h4>
-                        <p class="text-gray-600 text-sm">We respond to all inquiries within 24 hours</p>
-                    </div>
-                    <div class="group">
-                        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-200 transition-colors">
-                            <i class="fa-solid fa-user-doctor text-blue-600 text-2xl"></i>
-                        </div>
-                        <h4 class="font-bold text-[#3a5a40] mb-2">Expert Guidance</h4>
-                        <p class="text-gray-600 text-sm">Personalized nutrition advice from certified experts</p>
-                    </div>
-                    <div class="group">
-                        <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-purple-200 transition-colors">
-                            <i class="fa-solid fa-heart text-purple-600 text-2xl"></i>
-                        </div>
-                        <h4 class="font-bold text-[#3a5a40] mb-2">Trusted by 1000+</h4>
-                        <p class="text-gray-600 text-sm">Join our community of health-conscious individuals</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<div class="grid md:grid-cols-2 gap-6">
+<div class="group">
+<label class="text-xs font-bold uppercase tracking-wider text-[#3a5a40] mb-3 block group-focus-within:text-[#2d4531]" for="name">Full Name *</label>
+<input autocomplete="name" class="w-full bg-gray-50 border-2 border-gray-200 rounded-xl py-4 px-5 focus:outline-none focus:border-[#3a5a40] focus:bg-white transition-all duration-300" id="name" name="name" placeholder="Enter your full name" required="" type="text"/>
+</div>
+<div class="group">
+<label class="text-xs font-bold uppercase tracking-wider text-[#3a5a40] mb-3 block group-focus-within:text-[#2d4531]" for="email">Email Address *</label>
+<input autocomplete="email" class="w-full bg-gray-50 border-2 border-gray-200 rounded-xl py-4 px-5 focus:outline-none focus:border-[#3a5a40] focus:bg-white transition-all duration-300" id="email" name="email" placeholder="your@email.com" required="" type="email"/>
+</div>
+</div>
+<div class="group">
+<label class="text-xs font-bold uppercase tracking-wider text-[#3a5a40] mb-3 block group-focus-within:text-[#2d4531]" for="phone">Phone Number *</label>
+<input autocomplete="tel" class="w-full bg-gray-50 border-2 border-gray-200 rounded-xl py-4 px-5 focus:outline-none focus:border-[#3a5a40] focus:bg-white transition-all duration-300" id="phone" name="phone" placeholder="+91 XXXXX XXXXX" required="" type="tel"/>
+</div>
+<div class="group">
+<label class="text-xs font-bold uppercase tracking-wider text-[#3a5a40] mb-3 block group-focus-within:text-[#2d4531]" for="message">Message</label>
+<textarea class="w-full bg-gray-50 border-2 border-gray-200 rounded-xl py-4 px-5 focus:outline-none focus:border-[#3a5a40] focus:bg-white transition-all duration-300 resize-none" id="message" name="message" placeholder="Tell us about your health goals or any questions you have..." rows="4"></textarea>
+</div>
+<button class="group w-full bg-gradient-to-r from-[#3a5a40] to-[#2d4531] text-white py-5 px-8 rounded-2xl font-bold text-lg uppercase tracking-wider hover:shadow-xl hover:shadow-[#3a5a40]/30 transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center space-x-3" id="sendButton" type="submit">
+<span>Send Message</span>
+<svg aria-hidden="true" class="site-icon group-hover:translate-x-1 transition-transform" height="24" width="24"><use href="/assets/icons.svg#paper-plane"></use></svg>
+</button>
+<p class="text-xs text-gray-500 text-center mt-4" id="contact-privacy">
+<svg aria-hidden="true" class="site-icon mr-1" height="24" width="24"><use href="/assets/icons.svg#shield"></use></svg>Your message is processed by Web3Forms to deliver your enquiry to us. You can also contact us by phone or WhatsApp.</p>
+<input aria-hidden="true" class="hidden" name="botcheck" tabindex="-1" type="checkbox"/><p aria-live="polite" class="text-sm text-[#3a5a40]" id="form-status" role="status"></p></form>
+</div>
+</div>
+</div>
+<!-- Trust Indicators -->
+<div class="bg-white/80 backdrop-blur-sm p-8 rounded-3xl border border-stone-200 shadow-lg">
+<div class="grid md:grid-cols-3 gap-8 text-center">
+<div class="group">
+<div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-green-200 transition-colors">
+<svg aria-hidden="true" class="site-icon text-green-600 text-2xl" height="24" width="24"><use href="/assets/icons.svg#clock"></use></svg>
+</div>
+<h4 class="font-bold text-[#3a5a40] mb-2">Quick Response</h4>
+<p class="text-gray-600 text-sm">We respond to all inquiries within 24 hours</p>
+</div>
+<div class="group">
+<div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-200 transition-colors">
+<svg aria-hidden="true" class="site-icon text-blue-600 text-2xl" height="24" width="24"><use href="/assets/icons.svg#leaf"></use></svg>
+</div>
+<h4 class="font-bold text-[#3a5a40] mb-2">Product Questions</h4>
+<p class="text-gray-600 text-sm">Ask us about ingredients, preparation and ordering</p>
+</div>
+<div class="group">
+<div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-purple-200 transition-colors">
+<svg aria-hidden="true" class="site-icon text-purple-600 text-2xl" height="24" width="24"><use href="/assets/icons.svg#heart"></use></svg>
+</div>
+<h4 class="font-bold text-[#3a5a40] mb-2">Get to Know the Recipe</h4>
+<p class="text-gray-600 text-sm">Explore the ingredients and ask us about the blend</p>
+</div>
+</div>
+</div>
+</div>
+</section></main>
+<!-- Hero -->
 
-    <!-- Footer -->
-    <footer class="py-8 bg-white border-t border-stone-100">
-        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
-            <div class="flex items-center space-x-3">
-                <img src="icon.png" class="w-8 h-8 rounded-lg object-contain" onerror="this.src='icon.jpg'">
-                <span class="font-bold text-[#3a5a40] tracking-tighter">MIRTHU POSHAN</span>
-            </div>
-            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">© 2025 Crafted with Pure Intentions</p>
-        </div>
-    </footer>
+<!-- Stats -->
 
-    <script>
-        window.addEventListener('scroll', () => {
-            document.querySelectorAll('.reveal').forEach(el => {
-                if (el.getBoundingClientRect().top < window.innerHeight - 150) el.classList.add('active');
-            });
-        });
+<!-- Legacy -->
 
-        // Contact form functionality with Web3Forms
-        document.getElementById('contactForm').addEventListener('submit', async function(e) {
-            e.preventDefault();
-            
-            const sendButton = document.getElementById('sendButton');
-            const originalText = sendButton.innerHTML;
-            
-            // Show loading state
-            sendButton.innerHTML = '<span>Sending...</span><i class="fa-solid fa-spinner fa-spin"></i>';
-            sendButton.disabled = true;
-            
-            try {
-                // Get form data
-                const formData = new FormData(this);
-                
-                // Add additional data
-                formData.append('to', 'info@mirthuposhan.com');
-                formData.append('from_name', 'Mirthu Poshan Contact Form');
-                formData.append('website', window.location.origin);
-                formData.append('timestamp', new Date().toLocaleString());
-                
-                // Submit to Web3Forms
-                const response = await fetch('https://api.web3forms.com/submit', {
-                    method: 'POST',
-                    body: formData
-                });
-                
-                const result = await response.json();
-                
-                if (result.success) {
-                    // Success
-                    showNotification('Message sent successfully! We\'ll get back to you within 24 hours.', 'success');
-                    this.reset(); // Reset form
-                } else {
-                    throw new Error(result.message || 'Failed to send message');
-                }
-                
-            } catch (error) {
-                console.error('Form submission error:', error);
-                showNotification('Failed to send message. Please try again or contact us directly.', 'error');
-            } finally {
-                // Reset button
-                sendButton.innerHTML = originalText;
-                sendButton.disabled = false;
-            }
-        });
+<!-- Ingredients -->
 
-        // Notification function
-        function showNotification(message, type) {
-            const notification = document.createElement('div');
-            notification.className = `fixed top-6 right-6 z-[1000] max-w-md p-4 rounded-2xl shadow-xl transform transition-all duration-300 translate-x-full`;
-            
-            if (type === 'success') {
-                notification.classList.add('bg-green-500', 'text-white');
-                notification.innerHTML = `
-                    <div class="flex items-center space-x-3">
-                        <i class="fa-solid fa-check-circle text-xl"></i>
-                        <span class="font-medium">${message}</span>
-                    </div>
-                `;
-            } else {
-                notification.classList.add('bg-red-500', 'text-white');
-                notification.innerHTML = `
-                    <div class="flex items-center space-x-3">
-                        <i class="fa-solid fa-exclamation-triangle text-xl"></i>
-                        <span class="font-medium">${message}</span>
-                    </div>
-                `;
-            }
-            
-            document.body.appendChild(notification);
-            
-            // Animate in
-            setTimeout(() => {
-                notification.classList.remove('translate-x-full');
-            }, 100);
-            
-            // Remove after 5 seconds
-            setTimeout(() => {
-                notification.classList.add('translate-x-full');
-                setTimeout(() => {
-                    document.body.removeChild(notification);
-                }, 300);
-            }, 5000);
-        }
-    </script>
-</body>
+<!-- Crafting -->
+
+<!-- Usage -->
+
+<!-- Contact -->
+
+<!-- Footer -->
+<footer class="py-8 bg-white border-t border-stone-100">
+<div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+<div class="flex items-center space-x-3">
+<img alt="Mirthu Poshan" class="w-8 h-8 rounded-lg object-contain" height="1080" src="/icon.png" width="1080"/>
+<span class="font-bold text-[#3a5a40] tracking-tighter">MIRTHU POSHAN</span>
+</div>
+<p class="text-[10px] font-bold text-gray-600 uppercase tracking-widest">© 2025 Crafted with Pure Intentions</p>
+</div>
+<nav aria-label="Footer" class="max-w-7xl mx-auto px-6 pt-6 flex gap-6"><a class="underline" href="/ingredients.html">Ingredient guide</a><a class="underline" href="/#contact">Contact and orders</a></nav></footer>
+
+<script defer="" src="/assets/site.js"></script></body>
 </html>

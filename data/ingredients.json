@@ -1,0 +1,646 @@
+{
+  "reviewed_on": "2026-10-31",
+  "sources": {
+    "iimr": {
+      "title": "ICAR–Indian Institute of Millets Research: millet names and composition",
+      "url": "https://millets.res.in/millets_info.php"
+    },
+    "ifct": {
+      "title": "ICMR–National Institute of Nutrition: Indian Food Composition Tables 2017",
+      "url": "https://www.nin.res.in/ebooks/IFCT2017_16122024.pdf"
+    },
+    "pulses": {
+      "title": "Tamil Nadu Agricultural University: composition of pulses",
+      "url": "https://agritech.tnau.ac.in/postharvest/pht_pulses_composition.html"
+    },
+    "vitamine": {
+      "title": "NIH Office of Dietary Supplements: vitamin E food sources",
+      "url": "https://ods.od.nih.gov/factsheets/VitaminE-HealthProfessional/"
+    },
+    "omega3": {
+      "title": "NIH Office of Dietary Supplements: omega-3 fatty acids",
+      "url": "https://ods.od.nih.gov/factsheets/Omega3FattyAcids-HealthProfessional/"
+    },
+    "magnesium": {
+      "title": "NIH Office of Dietary Supplements: magnesium food sources",
+      "url": "https://ods.od.nih.gov/factsheets/Magnesium-HealthProfessional/"
+    },
+    "cucumber": {
+      "title": "Wu et al. (2012): chemical constituents of cucumber seed oil",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23397724/"
+    },
+    "fenugreek": {
+      "title": "NIH NCCIH: fenugreek evidence and safety",
+      "url": "https://www.nccih.nih.gov/health/fenugreek"
+    },
+    "usda": {
+      "title": "USDA: Nutritive Value of Foods (Home and Garden Bulletin 72)",
+      "url": "https://www.ars.usda.gov/ARSUserFiles/80400525/Data/hg72/hg72_2002.pdf"
+    },
+    "spices": {
+      "title": "Tamil Nadu Agricultural University: culinary spices",
+      "url": "https://www.agritech.tnau.ac.in/postharvest/pht_spices.html"
+    },
+    "lablab": {
+      "title": "Tamil Nadu Agricultural University: lablab / Dolichos bean identity",
+      "url": "https://agritech.tnau.ac.in/horticulture/horti_vegetables_lab%20lab.html"
+    },
+    "watermelon": {
+      "title": "USDA FoodData Central: dried watermelon seed kernels (FDC 169407)",
+      "url": "https://fdc.nal.usda.gov/food-details/169407/nutrients"
+    }
+  },
+  "ingredients": [
+    {
+      "id": "kodo-millet",
+      "recipe_position": 1,
+      "name": "Kodo Millet",
+      "category": "Millets",
+      "icon": "grain",
+      "nutrient": "Carbohydrate and fibre",
+      "detail": "A cereal grain that contributes energy and dietary fibre.",
+      "sources": [
+        "iimr"
+      ],
+      "reference_entry": "Kodo millet",
+      "status": "reviewed"
+    },
+    {
+      "id": "foxtail-millet",
+      "recipe_position": 2,
+      "name": "Navane (Foxtail Millet)",
+      "category": "Millets",
+      "icon": "grain",
+      "nutrient": "Carbohydrate and protein",
+      "detail": "Adds cereal carbohydrate, plant protein and fibre; preparation affects the nutritional profile.",
+      "sources": [
+        "iimr"
+      ],
+      "reference_entry": "Foxtail millet; Kannada: Navane",
+      "status": "reviewed"
+    },
+    {
+      "id": "proso-millet",
+      "recipe_position": 3,
+      "name": "Baragu (Proso Millet)",
+      "category": "Millets",
+      "icon": "grain",
+      "nutrient": "Carbohydrate and protein",
+      "detail": "Contributes cereal energy and plant protein to a varied diet.",
+      "sources": [
+        "iimr"
+      ],
+      "reference_entry": "Proso millet; Kannada: Baragu",
+      "status": "reviewed"
+    },
+    {
+      "id": "little-millet",
+      "recipe_position": 4,
+      "name": "Saame (Little Millet)",
+      "category": "Millets",
+      "icon": "grain",
+      "nutrient": "Carbohydrate and fibre",
+      "detail": "A small millet that contributes carbohydrate and dietary fibre, adding variety to cereal-based meals.",
+      "sources": [
+        "iimr"
+      ],
+      "reference_entry": "Little millet; Kannada: Same/Save",
+      "status": "reviewed"
+    },
+    {
+      "id": "browntop-millet",
+      "recipe_position": 5,
+      "name": "Korale (Browntop Millet)",
+      "category": "Millets",
+      "icon": "grain",
+      "nutrient": "Carbohydrate and fibre",
+      "detail": "Adds cereal carbohydrate, plant protein and dietary fibre as one of the millets in the recipe.",
+      "sources": [
+        "iimr"
+      ],
+      "reference_entry": "Brown top millet composition row",
+      "status": "reviewed"
+    },
+    {
+      "id": "barnyard-millet",
+      "recipe_position": 6,
+      "name": "Oodhalu (Barnyard Millet)",
+      "category": "Millets",
+      "icon": "grain",
+      "nutrient": "Carbohydrate and fibre",
+      "detail": "Contributes carbohydrate, fibre and some plant protein.",
+      "sources": [
+        "iimr"
+      ],
+      "reference_entry": "Barnyard millet; Kannada: Oodalu",
+      "status": "reviewed"
+    },
+    {
+      "id": "almond",
+      "recipe_position": 11,
+      "name": "Almond",
+      "category": "Nuts",
+      "icon": "almond",
+      "nutrient": "Vitamin E and unsaturated fats",
+      "detail": "Provides vitamin E and unsaturated fats; vitamin E contributes to normal antioxidant function.",
+      "sources": [
+        "vitamine"
+      ],
+      "reference_entry": "Almonds, dry roasted, food sources table",
+      "status": "reviewed"
+    },
+    {
+      "id": "walnut",
+      "recipe_position": 12,
+      "name": "Walnut",
+      "category": "Nuts",
+      "icon": "walnut",
+      "nutrient": "Plant omega-3 (ALA)",
+      "detail": "Contains alpha-linolenic acid (ALA), a plant omega-3 fat; ALA is different from marine EPA and DHA.",
+      "sources": [
+        "omega3"
+      ],
+      "reference_entry": "Walnuts, English, selected food sources",
+      "status": "reviewed"
+    },
+    {
+      "id": "pumpkin-seeds",
+      "recipe_position": 7,
+      "name": "Pumpkin Seeds",
+      "category": "Seeds",
+      "icon": "seed",
+      "nutrient": "Magnesium",
+      "detail": "Contributes magnesium, a mineral involved in normal muscle and nerve function.",
+      "sources": [
+        "magnesium"
+      ],
+      "reference_entry": "Pumpkin seeds, roasted, selected food sources",
+      "status": "reviewed"
+    },
+    {
+      "id": "cucumber-seeds",
+      "recipe_position": 8,
+      "name": "Cucumber Seeds",
+      "category": "Seeds",
+      "icon": "seed",
+      "nutrient": "Seed oil",
+      "detail": "Cucumber seed oil contains fatty acids, including linoleic acid, that contribute to the fat content of the seeds.",
+      "sources": [
+        "cucumber"
+      ],
+      "reference_entry": "Seed oil fatty-acid analysis, PMID 23397724",
+      "status": "reviewed"
+    },
+    {
+      "id": "sunflower-seeds",
+      "recipe_position": 9,
+      "name": "Sunflower Seeds",
+      "category": "Seeds",
+      "icon": "seed",
+      "nutrient": "Vitamin E",
+      "detail": "Provides vitamin E, which contributes to normal antioxidant function.",
+      "sources": [
+        "vitamine"
+      ],
+      "reference_entry": "Sunflower seeds, dry roasted, food sources table",
+      "status": "reviewed"
+    },
+    {
+      "id": "watermelon-seeds",
+      "recipe_position": 10,
+      "name": "Watermelon Seeds",
+      "category": "Seeds",
+      "icon": "seed",
+      "nutrient": "Protein and fats",
+      "detail": "Adds plant protein and fat; seed nutrients differ from those in the watery fruit pulp.",
+      "sources": [
+        "watermelon"
+      ],
+      "reference_entry": "USDA FDC 169407; Protein and Total lipid (fat), verified via USDA API",
+      "status": "reviewed"
+    },
+    {
+      "id": "poppy-seeds",
+      "recipe_position": 13,
+      "name": "Poppy Seeds",
+      "category": "Seeds",
+      "icon": "seed",
+      "nutrient": "Fats and minerals",
+      "detail": "Contains fat and minerals, including calcium. The amount delivered depends on the portion used.",
+      "sources": [
+        "ifct"
+      ],
+      "reference_entry": "Poppy seeds",
+      "status": "reviewed"
+    },
+    {
+      "id": "sesame-seeds",
+      "recipe_position": 14,
+      "name": "Til (Sesame Seeds)",
+      "category": "Seeds",
+      "icon": "seed",
+      "nutrient": "Unsaturated fats",
+      "detail": "Adds fat and plant protein. Its nutrient contribution to a serving depends on the amount used.",
+      "sources": [
+        "ifct"
+      ],
+      "reference_entry": "Gingelly seeds, black/brown/white",
+      "status": "reviewed"
+    },
+    {
+      "id": "fenugreek-seeds",
+      "recipe_position": 17,
+      "name": "Fenugreek Seeds",
+      "category": "Seeds",
+      "icon": "seed",
+      "nutrient": "Fibre and culinary flavour",
+      "detail": "Adds fibre and a characteristic flavour. Evidence is insufficient to promise digestive or blood-sugar benefits from this blend.",
+      "sources": [
+        "ifct",
+        "fenugreek"
+      ],
+      "reference_entry": "G026 Fenugreek seeds; NCCIH evidence limitations",
+      "status": "reviewed"
+    },
+    {
+      "id": "flax-seeds",
+      "recipe_position": 40,
+      "name": "Flax Seeds",
+      "category": "Seeds",
+      "icon": "seed",
+      "nutrient": "Plant omega-3 (ALA)",
+      "detail": "Contributes alpha-linolenic acid, an essential plant omega-3 fatty acid.",
+      "sources": [
+        "omega3"
+      ],
+      "reference_entry": "Flaxseed, whole, selected food sources",
+      "status": "reviewed"
+    },
+    {
+      "id": "bellar",
+      "recipe_position": 15,
+      "name": "Bellar (Avare Kalu)",
+      "category": "Pulses and legumes",
+      "icon": "bean",
+      "nutrient": "Plant protein",
+      "detail": "Whole field beans, also called avare kalu, contribute plant protein and carbohydrate. Cook before eating.",
+      "sources": [
+        "lablab",
+        "pulses"
+      ],
+      "reference_entry": "Owner-confirmed whole form; TNAU lablab identity and field bean, dry composition",
+      "status": "reviewed"
+    },
+    {
+      "id": "soybeans",
+      "recipe_position": 16,
+      "name": "Soya Beans",
+      "category": "Pulses and legumes",
+      "icon": "bean",
+      "nutrient": "Plant protein",
+      "detail": "Contributes plant protein and fat. Soy is one of the allergens in the recipe.",
+      "sources": [
+        "ifct"
+      ],
+      "reference_entry": "Soyabean, brown/white",
+      "status": "reviewed"
+    },
+    {
+      "id": "finger-millet",
+      "recipe_position": 18,
+      "name": "Raagi (Finger Millet)",
+      "category": "Millets",
+      "icon": "grain",
+      "nutrient": "Calcium",
+      "detail": "Contains calcium, which contributes to normal bones and teeth as part of a balanced diet.",
+      "sources": [
+        "iimr"
+      ],
+      "reference_entry": "Finger millet composition row",
+      "status": "reviewed"
+    },
+    {
+      "id": "kabuli-chickpeas",
+      "recipe_position": 19,
+      "name": "Kabul Gram (Kabuli Chickpeas)",
+      "category": "Pulses and legumes",
+      "icon": "bean",
+      "nutrient": "Protein and fibre",
+      "detail": "Contributes plant protein and fibre. Kabuli and black chana are varieties of chickpea, not different species.",
+      "sources": [
+        "ifct"
+      ],
+      "reference_entry": "Bengal gram, whole",
+      "status": "reviewed"
+    },
+    {
+      "id": "green-gram",
+      "recipe_position": 20,
+      "name": "Green Gram (Mung Bean)",
+      "category": "Pulses and legumes",
+      "icon": "bean",
+      "nutrient": "Protein and fibre",
+      "detail": "Adds plant protein and dietary fibre; whole and split forms have different fibre contents.",
+      "sources": [
+        "ifct"
+      ],
+      "reference_entry": "Green gram, whole/dal",
+      "status": "reviewed"
+    },
+    {
+      "id": "bellar-dal",
+      "recipe_position": 21,
+      "name": "Bellar Dal (Avare Bele)",
+      "category": "Pulses and legumes",
+      "icon": "bean",
+      "nutrient": "Plant protein",
+      "detail": "The split form of Bellar, called avare bele, contributes plant protein. Splitting and removal of the seed coat change its fibre content.",
+      "sources": [
+        "lablab",
+        "pulses"
+      ],
+      "reference_entry": "Owner-confirmed split form; general pulse composition, without assigning whole-seed nutrient quantities",
+      "status": "reviewed"
+    },
+    {
+      "id": "white-cowpeas",
+      "recipe_position": 22,
+      "name": "Cow Peas White",
+      "category": "Pulses and legumes",
+      "icon": "bean",
+      "nutrient": "Protein and fibre",
+      "detail": "White cowpeas contribute plant protein, carbohydrate and dietary fibre.",
+      "sources": [
+        "ifct"
+      ],
+      "reference_entry": "Cow pea, white",
+      "status": "reviewed"
+    },
+    {
+      "id": "brown-cowpeas",
+      "recipe_position": 23,
+      "name": "Cow Peas Brown",
+      "category": "Pulses and legumes",
+      "icon": "bean",
+      "nutrient": "Protein and fibre",
+      "detail": "Brown cowpeas contribute plant protein, carbohydrate and dietary fibre.",
+      "sources": [
+        "ifct"
+      ],
+      "reference_entry": "Cow pea, brown",
+      "status": "reviewed"
+    },
+    {
+      "id": "green-peas",
+      "recipe_position": 24,
+      "name": "Green Peas",
+      "category": "Pulses and legumes",
+      "icon": "pea",
+      "nutrient": "Protein and carbohydrate",
+      "detail": "Adds plant protein and carbohydrate. Fresh and dried peas have different nutrient concentrations.",
+      "sources": [
+        "ifct"
+      ],
+      "reference_entry": "Peas, dry; peas, fresh",
+      "status": "reviewed"
+    },
+    {
+      "id": "white-peas",
+      "recipe_position": 25,
+      "name": "White Peas",
+      "category": "Pulses and legumes",
+      "icon": "pea",
+      "nutrient": "Protein and fibre",
+      "detail": "Dried peas contribute plant protein and fibre when cooked.",
+      "sources": [
+        "pulses"
+      ],
+      "reference_entry": "Peas and pulse composition",
+      "status": "reviewed"
+    },
+    {
+      "id": "black-urad",
+      "recipe_position": 26,
+      "name": "Black Urad (Whole Black Gram)",
+      "category": "Pulses and legumes",
+      "icon": "bean",
+      "nutrient": "Protein and fibre",
+      "detail": "Whole black gram contributes plant protein and fibre, including fibre from its seed coat.",
+      "sources": [
+        "ifct"
+      ],
+      "reference_entry": "Black gram, whole",
+      "status": "reviewed"
+    },
+    {
+      "id": "barley",
+      "recipe_position": 27,
+      "name": "Barley (Barli)",
+      "category": "Other cereals and starches",
+      "icon": "grain",
+      "nutrient": "Carbohydrate and fibre",
+      "detail": "A cereal that contributes carbohydrate and dietary fibre. Barley contains gluten and is unsuitable for a gluten-free diet.",
+      "sources": [
+        "ifct"
+      ],
+      "reference_entry": "A004 Barley (Hordeum vulgare); owner confirmed Barli Rice means barley",
+      "status": "reviewed"
+    },
+    {
+      "id": "sago",
+      "recipe_position": 28,
+      "name": "Sago (Sabudana)",
+      "category": "Other cereals and starches",
+      "icon": "sago",
+      "nutrient": "Starch",
+      "detail": "Primarily contributes carbohydrate energy, with little protein or fibre. It is not a pulse or a type of rice.",
+      "sources": [
+        "usda"
+      ],
+      "reference_entry": "Tapioca, pearl, dry (sabudana starch comparison; not botanical identification)",
+      "status": "reviewed"
+    },
+    {
+      "id": "white-rajma",
+      "recipe_position": 29,
+      "name": "Rajma White",
+      "category": "Pulses and legumes",
+      "icon": "bean",
+      "nutrient": "Protein and fibre",
+      "detail": "White kidney beans contribute plant protein and fibre when properly cooked.",
+      "sources": [
+        "pulses"
+      ],
+      "reference_entry": "Rajmah; general protein and fibre only, not colour-specific",
+      "status": "reviewed"
+    },
+    {
+      "id": "red-kidney-beans",
+      "recipe_position": 30,
+      "name": "Kidney Beans Red",
+      "category": "Pulses and legumes",
+      "icon": "bean",
+      "nutrient": "Protein and fibre",
+      "detail": "Red kidney beans contribute plant protein and fibre; they must be properly processed and cooked.",
+      "sources": [
+        "ifct"
+      ],
+      "reference_entry": "Rajmah, red",
+      "status": "reviewed"
+    },
+    {
+      "id": "brown-kidney-beans",
+      "recipe_position": 31,
+      "name": "Kidney Beans Brown",
+      "category": "Pulses and legumes",
+      "icon": "bean",
+      "nutrient": "Protein and fibre",
+      "detail": "Brown kidney beans contribute plant protein and dietary fibre when properly cooked.",
+      "sources": [
+        "ifct"
+      ],
+      "reference_entry": "B019 Rajmah, brown",
+      "status": "reviewed"
+    },
+    {
+      "id": "horse-gram",
+      "recipe_position": 32,
+      "name": "Horse Gram",
+      "category": "Pulses and legumes",
+      "icon": "bean",
+      "nutrient": "Protein and fibre",
+      "detail": "Adds plant protein and dietary fibre to a varied diet.",
+      "sources": [
+        "ifct"
+      ],
+      "reference_entry": "Horse gram, whole",
+      "status": "reviewed"
+    },
+    {
+      "id": "peanuts",
+      "recipe_position": 33,
+      "name": "Peanuts",
+      "category": "Pulses and legumes",
+      "icon": "peanut",
+      "nutrient": "Protein and fats",
+      "detail": "A legume that contributes plant protein and fats. Peanut is an allergen, distinct from tree nuts.",
+      "sources": [
+        "ifct"
+      ],
+      "reference_entry": "Groundnut",
+      "status": "reviewed"
+    },
+    {
+      "id": "black-chana",
+      "recipe_position": 34,
+      "name": "Chick Peas (Black Chana)",
+      "category": "Pulses and legumes",
+      "icon": "bean",
+      "nutrient": "Protein and fibre",
+      "detail": "Whole chickpeas contribute plant protein and fibre; black chana is a chickpea variety.",
+      "sources": [
+        "ifct"
+      ],
+      "reference_entry": "Bengal gram, whole",
+      "status": "reviewed"
+    },
+    {
+      "id": "urad-dal",
+      "recipe_position": 35,
+      "name": "Urad Dal (Split Black Gram)",
+      "category": "Pulses and legumes",
+      "icon": "bean",
+      "nutrient": "Plant protein",
+      "detail": "Split black gram contributes plant protein; removing the seed coat changes its fibre content.",
+      "sources": [
+        "ifct"
+      ],
+      "reference_entry": "Black gram, dal",
+      "status": "reviewed"
+    },
+    {
+      "id": "masoor-dal",
+      "recipe_position": 36,
+      "name": "Masoor Dal (Lentils)",
+      "category": "Pulses and legumes",
+      "icon": "bean",
+      "nutrient": "Protein and fibre",
+      "detail": "Contributes plant protein and fibre; nutrient values depend on the whole or split form.",
+      "sources": [
+        "ifct"
+      ],
+      "reference_entry": "Lentil dal",
+      "status": "reviewed"
+    },
+    {
+      "id": "moth-gram",
+      "recipe_position": 37,
+      "name": "Moth Gram",
+      "category": "Pulses and legumes",
+      "icon": "bean",
+      "nutrient": "Plant protein",
+      "detail": "Adds plant protein, carbohydrate and dietary fibre to a varied diet.",
+      "sources": [
+        "ifct"
+      ],
+      "reference_entry": "B016 Moth bean",
+      "status": "reviewed"
+    },
+    {
+      "id": "bengal-gram",
+      "recipe_position": 38,
+      "name": "Split Bengal Gram (Chana Dal)",
+      "category": "Pulses and legumes",
+      "icon": "bean",
+      "nutrient": "Plant protein",
+      "detail": "Split chickpeas contribute plant protein; their fibre content differs from whole chickpeas.",
+      "sources": [
+        "ifct"
+      ],
+      "reference_entry": "Bengal gram, dal",
+      "status": "reviewed"
+    },
+    {
+      "id": "jowar",
+      "recipe_position": 39,
+      "name": "Jowar (Sorghum)",
+      "category": "Millets",
+      "icon": "grain",
+      "nutrient": "Carbohydrate and fibre",
+      "detail": "Contributes cereal carbohydrate, plant protein and fibre. This blend also contains barley and is not gluten-free.",
+      "sources": [
+        "iimr"
+      ],
+      "reference_entry": "Sorghum composition row",
+      "status": "reviewed"
+    },
+    {
+      "id": "cardamom",
+      "recipe_position": 41,
+      "name": "Elachi (Cardamom)",
+      "category": "Spices",
+      "icon": "cardamom",
+      "nutrient": "Aromatic spice",
+      "detail": "Adds a characteristic aroma and flavour in the small quantities used as a culinary spice.",
+      "sources": [
+        "spices"
+      ],
+      "reference_entry": "Cardamom",
+      "status": "reviewed"
+    },
+    {
+      "id": "cumin",
+      "recipe_position": 42,
+      "name": "Jeera (Cumin Seeds)",
+      "category": "Spices",
+      "icon": "cumin",
+      "nutrient": "Aromatic spice",
+      "detail": "Adds a distinctive aroma and flavour in the small quantities used as a culinary spice.",
+      "sources": [
+        "spices"
+      ],
+      "reference_entry": "Cumin seeds",
+      "status": "reviewed"
+    }
+  ]
+}

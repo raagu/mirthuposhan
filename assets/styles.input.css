@@ -1,0 +1,158 @@
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url(/assets/fonts/fraunces-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url(/assets/fonts/plus-jakarta-sans-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+            --brand-green: #3a5a40;
+            --brand-light-green: #a3b18a;
+            --brand-cream: #fefae0;
+            --brand-gold: #bc6c25;
+            --brand-white: #ffffff;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--brand-white);
+            scroll-behavior: smooth;
+            color: #1a1a1a;
+        }
+
+        .serif { font-family: 'Fraunces', serif; }
+
+        .hero-section {
+            background: url('/assets/hero.webp');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, var(--brand-green), var(--brand-gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Stable Logo Styling */
+        .brand-logo-group {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            height: 48px;
+        }
+
+        .brand-logo-main {
+            height: 300%;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .brand-logo-visual {
+            height: 100%;
+            width: auto;
+            object-fit: contain;
+            border-left: 1px solid rgba(0,0,0,0.1);
+            padding-left: 0.75rem;
+        }
+
+        .ingredient-card {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .ingredient-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(58, 90, 64, 0.08);
+            border-color: var(--brand-light-green);
+        }
+
+        .process-dot {
+            position: relative;
+        }
+
+        .process-dot::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: -50px;
+            width: 2px;
+            height: 40px;
+            background: repeating-linear-gradient(to bottom, var(--brand-light-green), var(--brand-light-green) 4px, transparent 4px, transparent 8px);
+        }
+
+        @media (min-width: 768px) {
+            .process-dot::after {
+                left: 100%;
+                top: 50%;
+                width: 60px;
+                height: 2px;
+                background: repeating-linear-gradient(to right, var(--brand-light-green), var(--brand-light-green) 4px, transparent 4px, transparent 8px);
+            }
+        }
+
+        .process-card:last-child .process-dot::after { display: none; }
+
+        .btn-primary {
+            background: var(--brand-green);
+            color: white;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(58, 90, 64, 0.2);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 30px rgba(58, 90, 64, 0.3);
+            background: #2d4531;
+        }
+
+        .reveal { opacity: 1; }
+
+/* Content is visible without JavaScript, including to crawlers. */
+html { scroll-behavior: smooth; scroll-padding-top: 7rem; }
+section[id], article[id] { scroll-margin-top: 7rem; }
+.site-icon { display:inline-block; width:1em; height:1em; vertical-align:-.125em; fill:none; stroke:currentColor; stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round; flex-shrink:0; }
+.ingredient-icon { width:3rem; height:3rem; color:#3a5a40; }
+.ingredient-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,15rem),1fr)); gap:1rem; }
+.ingredient-detail { padding:1.5rem; border:1px solid #e0e6d9; border-radius:1.5rem; background:white; }
+.ingredient-detail h4 { font-size:1.1rem; font-weight:700; color:#3a5a40; margin:.75rem 0; }
+.ingredient-detail p { font-size:1rem; line-height:1.7; color:#475347; margin:.5rem 0; }
+.ingredient-detail a, .source-list a { color:#344e36; text-decoration:underline; text-underline-offset:3px; }
+.category-title { margin:2.5rem 0 1rem; font-size:1.6rem; font-weight:700; color:#3a5a40; }
+.nutrition-note { max-width:70rem; margin:1.5rem auto; padding:1.5rem; border-radius:1rem; background:#fefae0; color:#344e36; line-height:1.8; }
+.skip-link { position:fixed; top:0; left:1rem; z-index:2000; padding:1rem; background:white; color:#344e36; transform:translateY(-120%); }
+.skip-link:focus { transform:translateY(0); }
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible { outline:3px solid #bc6c25; outline-offset:4px; }
+.mobile-nav { display:none; }
+@media(max-width:1023px) {
+ .mobile-nav { display:block; padding:.5rem 1rem; background:#fff; border-bottom:1px solid #e0e6d9; }
+ .mobile-nav summary { cursor:pointer; font-weight:700; padding:.5rem; }
+ .mobile-nav a { display:block; padding:.65rem; }
+ .brand-logo-main { height:100%; }
+}
+@media(max-width:767px) { .hero-section { background-image:url('/assets/hero-mobile.webp'); } }
+@media(prefers-reduced-motion:reduce) {
+ html { scroll-behavior:auto; }
+ *, *::before, *::after { animation:none !important; transition:none !important; }
+}
