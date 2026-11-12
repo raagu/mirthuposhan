@@ -175,8 +175,13 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .hero-copy { max-width:480px; background:rgba(255,253,248,.96); border:1px solid #e4dfd0; border-radius:1.5rem; padding:1.5rem; box-shadow:0 10px 40px #3a5a4010; }
 .hero-copy .eyebrow { font-size:.7rem; margin-bottom:.5rem; }
 .eyebrow { font-size:.78rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#3a5a40; margin-bottom:.65rem; }
-.home-brand { font-family:'Fraunces',serif; font-size:clamp(2rem,3.2vw,2.8rem); line-height:1.1; font-weight:700; color:#2e5734; }
-.home-brand span { color:#426b31; }
+.brand-lockup { width:100%; max-width:25rem; }
+.home-brand { margin:0; line-height:1; }
+/* Original 1080px PNGs: show their lettering bounds, with 2px transparent padding. */
+.brand-artwork { display:block; position:relative; overflow:hidden; overflow:clip; aspect-ratio:850 / var(--artwork-height); }
+.brand-artwork img { position:absolute; width:calc(100% * 1080 / 850); max-width:none; height:auto; left:calc(-100% * 115 / 850); top:calc(-100% * var(--artwork-top) / var(--artwork-height)); }
+.brand-name { --artwork-height:94; --artwork-top:493; }
+.brand-tagline { --artwork-height:36; --artwork-top:522; margin-top:.35rem; }
 .hero-product { font-size:1.05rem; font-weight:700; line-height:1.45; margin:.65rem 0; }
 .hero-intro { color:#475347; font-size:.9rem; line-height:1.6; max-width:40ch; }
 .pack-heading { font-size:.9rem; font-weight:700; margin:1rem 0 .5rem; scroll-margin-top:10rem; }
