@@ -175,11 +175,10 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .hero-copy { max-width:480px; background:rgba(255,253,248,.96); border:1px solid #e4dfd0; border-radius:1.5rem; padding:1.5rem; box-shadow:0 10px 40px #3a5a4010; }
 .hero-copy .eyebrow { font-size:.7rem; margin-bottom:.5rem; }
 .eyebrow { font-size:.78rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#3a5a40; margin-bottom:.65rem; }
-.brand-lockup { width:100%; max-width:25rem; }
+.brand-lockup { width:100%; max-width:12.5rem; }
 .home-brand { margin:0; line-height:1; }
 /* Original 1080px PNGs: show their lettering bounds, with 2px transparent padding. */
-/* Reduce each artwork's displayed height by 2px, keeping its original proportions. */
-.brand-artwork { display:block; position:relative; width:calc(100% - 2px * 850 / var(--artwork-height)); overflow:hidden; overflow:clip; aspect-ratio:850 / var(--artwork-height); }
+.brand-artwork { display:block; position:relative; width:100%; overflow:hidden; overflow:clip; aspect-ratio:850 / var(--artwork-height); }
 .brand-artwork img { position:absolute; width:calc(100% * 1080 / 850); max-width:none; height:auto; left:calc(-100% * 115 / 850); top:calc(-100% * var(--artwork-top) / var(--artwork-height)); }
 .brand-name { --artwork-height:94; --artwork-top:493; }
 .brand-tagline { --artwork-height:36; --artwork-top:522; margin-top:.35rem; }
@@ -244,7 +243,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .home-footer p { margin-bottom:.4rem; }
 .home-footer a { text-decoration:underline; text-underline-offset:3px; overflow-wrap:anywhere; }
 .home-footer address { font-style:normal; font-size:.9rem; }
-.footer-brand { max-width:19rem; margin-bottom:.85rem; }
+.footer-brand { margin-bottom:.85rem; }
 .footer-brand h2 { margin:0; line-height:1; }
 .footer-brand .brand-tagline { margin-bottom:0; }
 .mobile-order { display:none; }
