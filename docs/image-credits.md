@@ -2,9 +2,9 @@
 
 ## Homepage brand name and tagline
 
-The owner supplied `Name.png` and `tagline.png`. The `brand-name` and `brand-tagline` PNGs in `assets/` are exact copies, named with their content hashes. The lettering, colours and tagline are preserved.
+The owner supplied `Name.png` and `tagline.png`. The homepage introduction and footer use the same `brand-name` and `brand-tagline` PNGs in `assets/`: exact copies named with their content hashes. The lettering, colours and tagline are preserved.
 
-Each original is 1080 × 1080 with a transparent canvas. CSS shows the lettering region with a two-pixel transparent margin and scales it proportionally. No image pixels are edited. The homepage retains a text heading for screen readers and the supplied tagline as image alternative text.
+Each original is 1080 × 1080 with a transparent canvas. CSS shows the lettering region with a two-pixel transparent margin and scales it proportionally. No image pixels are edited. The homepage retains text headings for screen readers and the supplied tagline as image alternative text.
 
 ## Multiple Meals comparison image
 
