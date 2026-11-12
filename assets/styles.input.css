@@ -178,7 +178,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .brand-lockup { width:100%; max-width:25rem; }
 .home-brand { margin:0; line-height:1; }
 /* Original 1080px PNGs: show their lettering bounds, with 2px transparent padding. */
-.brand-artwork { display:block; position:relative; overflow:hidden; overflow:clip; aspect-ratio:850 / var(--artwork-height); }
+/* Reduce each artwork's displayed height by 2px, keeping its original proportions. */
+.brand-artwork { display:block; position:relative; width:calc(100% - 2px * 850 / var(--artwork-height)); overflow:hidden; overflow:clip; aspect-ratio:850 / var(--artwork-height); }
 .brand-artwork img { position:absolute; width:calc(100% * 1080 / 850); max-width:none; height:auto; left:calc(-100% * 115 / 850); top:calc(-100% * var(--artwork-top) / var(--artwork-height)); }
 .brand-name { --artwork-height:94; --artwork-top:493; }
 .brand-tagline { --artwork-height:36; --artwork-top:522; margin-top:.35rem; }
