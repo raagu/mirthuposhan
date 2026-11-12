@@ -8,6 +8,10 @@ for (const width of [375, 1440]) {
       await page.goto(url);
       await page.evaluate(() => document.fonts.ready);
       if (url === '/') {
+        await expect(page.getByRole('heading', { level: 1, name: 'Mirthu Poshan', exact: true })).toBeVisible();
+        await expect(page.locator('.hero-copy').getByRole('img', { name: 'The power of 42 grains', exact: true })).toBeVisible();
+        await expect(page.locator('.home-footer').getByRole('heading', { level: 2, name: 'Mirthu Poshan', exact: true })).toBeVisible();
+        await expect(page.locator('.home-footer').getByRole('img', { name: 'The power of 42 grains', exact: true })).toBeVisible();
         await expect(page.locator('.category-card')).toHaveCount(6);
         await expect(page.locator('.pack-card')).toHaveCount(2);
         await expect(page.getByRole('link', { name: 'Order on WhatsApp: 500 g for ₹300' })).toBeVisible();
