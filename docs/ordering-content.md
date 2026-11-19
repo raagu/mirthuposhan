@@ -7,6 +7,7 @@ These business details were supplied by the owner in the website intake. They ar
 - 500 g costs ₹300; 1 kg costs ₹600.
 - The Early Bird offer gives free delivery across India until the owner announces a change. No closing date was supplied.
 - Orders use WhatsApp +91 91481 09589 or mirthuposhan@gmail.com. Enquiry hours are 8 AM–10 PM IST every day.
+- The owner supplied FSSAI Registration ID `21226187003847` and confirmed that the card uses the label “Registration ID”. The footer displays that wording and links to FSSAI's official verification page.
 - Courier orders use UPI. Cash is available for pickup or delivery by the maker's own team, depending on location and PIN code. There is no promise of courier cash on delivery.
 - The blend is prepared after taking orders and dispatched within one week of confirmation, usually within 2–3 days of preparation. Transit time depends on the destination; no delivery date is promised.
 - The owner specified six months **after opening**, stored in an airtight container. Do not silently rewrite this as six months from preparation. The pack carries a preparation date.

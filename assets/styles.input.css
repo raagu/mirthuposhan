@@ -251,6 +251,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .footer-brand { margin-bottom:.85rem; }
 .footer-brand h2 { margin:0; line-height:1; }
 .footer-brand .brand-tagline { margin-bottom:0; }
+.fssai-registration, .home-footer .fssai-registration { margin-top:.75rem; font-size:.8rem; line-height:1.7; color:#475347; }
+.fssai-registration a { font-size:inherit; line-height:inherit; text-decoration:underline; text-underline-offset:3px; }
 .mobile-order { display:none; }
 @media(max-width:1023px) {
  .desktop-links { display:none; }

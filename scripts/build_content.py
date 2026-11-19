@@ -73,6 +73,12 @@ def outbound(url, label, css='text-link', aria_label=None):
             f'rel="noopener noreferrer"{aria}>{escape(label)}</a>')
 
 
+def registration_footer():
+    link = outbound('https://www.fssai.gov.in/citizen/about-license-verification',
+                    'FSSAI Registration ID: ' + SHOP['fssai_registration_id'], 'fssai-link')
+    return '<p class="fssai-registration">' + link + '</p>'
+
+
 def pack_cards():
     cards = []
     for pack in SHOP['packs']:
@@ -169,7 +175,8 @@ def build():
     homepage = replace_block(homepage, 'REVIEWS', outbound(SHOP['reviews_url'], 'Read reviews on Google', 'home-button home-button-outline'))
     homepage = replace_block(homepage, 'CONTACT',
         '<p>' + outbound(generic_order, 'WhatsApp: ' + SHOP['phone_display']) + '</p><p>' +
-        outbound(email_url(), SHOP['email']) + '</p><p>' + escape(SHOP['hours']) + '</p>')
+        outbound(email_url(), SHOP['email']) + '</p><p>' + escape(SHOP['hours']) + '</p>' +
+        registration_footer())
     homepage = replace_block(homepage, 'MOBILE-ORDER', outbound(generic_order, 'Order on WhatsApp', 'home-button mobile-order'))
     (ROOT / 'index.html').write_text(homepage)
     sources = '<ul class="source-list space-y-4">' + ''.join(
@@ -197,7 +204,9 @@ def build():
 ''' + sources + '''</section>
 <p class="mt-12"><a href="/#contact" class="btn-primary inline-block px-8 py-4 rounded-2xl font-bold">Ask about ingredients or place an order</a></p>
 </main>
-<footer class="bg-white px-6 py-8 text-center"><a href="/">Mirthu Poshan home</a> · <a href="/#contact">Contact</a></footer>
+<footer class="bg-white px-6 py-8 text-center"><a href="/">Mirthu Poshan home</a> · <a href="/#contact">Contact</a>
+''' + registration_footer() + '''
+</footer>
 </body></html>
 '''
     (ROOT / 'ingredients.html').write_text(ingredients)
