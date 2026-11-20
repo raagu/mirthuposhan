@@ -4,8 +4,7 @@ These business details were supplied by the owner in the website intake. They ar
 
 ## Confirmed details
 
-- 500 g costs ₹300; 1 kg costs ₹600.
-- The Early Bird offer gives free delivery across India until the owner announces a change. No closing date was supplied.
+- 500 g costs ₹450; 1 kg costs ₹850.
 - Orders use WhatsApp +91 91481 09589 or mirthuposhan@gmail.com. Enquiry hours are 8 AM–10 PM IST every day.
 - The owner supplied FSSAI Registration ID `21226187003847` and confirmed that the card uses the label “Registration ID”. The footer displays that wording and links to FSSAI's official verification page.
 - Courier orders use UPI. Cash is available for pickup or delivery by the maker's own team, depending on location and PIN code. There is no promise of courier cash on delivery.
@@ -20,7 +19,7 @@ These business details were supplied by the owner in the website intake. They ar
 
 ## Compact page and preserved content
 
-Prices and pack-specific WhatsApp drafts appear at the top. Email is a secondary option. The homepage shows six ingredient categories linking to the full, referenced 42-ingredient guide. Seven FAQs, preparation process and pickup address use closed native details elements so visitors choose what to read.
+Prices and pack-specific WhatsApp drafts appear at the top. Email is a secondary option. The homepage shows six ingredient categories linking to the full, referenced 42-ingredient guide. Six FAQs, preparation process and pickup address use closed native details elements so visitors choose what to read.
 
 The approved title, 42 ingredients / 72h slow-crafted / 0% added sugars / 0% additives highlights and both comparison images are preserved. These highlights are owner-approved descriptions, not new nutritional analysis. No claim is added that one glass supplies every nutrient or replaces a varied diet. No customer photo, certification, urgency countdown, stock claim or health outcome is invented.
 
