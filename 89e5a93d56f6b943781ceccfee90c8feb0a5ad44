@@ -1,0 +1,1207 @@
+{
+  "version": 3,
+  "schemaVersion": 3,
+  "source": "mantis",
+  "sourceVersion": "1.0.17",
+  "generatedAt": "2026-11-20T14:03:13.695Z",
+  "hosts": [
+    "codex-cli"
+  ],
+  "files": [
+    {
+      "file": "404.html",
+      "action": "edited",
+      "linesAffected": 1,
+      "linesAdded": 1,
+      "linesDeleted": 1,
+      "totalLines": 2,
+      "assistant": null,
+      "actors": {
+        "ai": {
+          "added": 0,
+          "deleted": 0,
+          "changed": 0,
+          "touched": 0
+        },
+        "manual": {
+          "added": 0,
+          "deleted": 0,
+          "changed": 0,
+          "touched": 0
+        },
+        "tool": {
+          "added": 0,
+          "deleted": 0,
+          "changed": 0,
+          "touched": 0
+        },
+        "unknown": {
+          "added": 1,
+          "deleted": 1,
+          "changed": 2,
+          "touched": 1
+        }
+      },
+      "linesTouched": 1
+    },
+    {
+      "file": "assets/site.c1140b2d46934d7b.css",
+      "action": "added",
+      "linesAffected": 2,
+      "linesAdded": 2,
+      "linesDeleted": 0,
+      "totalLines": 2,
+      "assistant": null,
+      "actors": {
+        "ai": {
+          "added": 0,
+          "deleted": 0,
+          "changed": 0,
+          "touched": 0
+        },
+        "manual": {
+          "added": 0,
+          "deleted": 0,
+          "changed": 0,
+          "touched": 0
+        },
+        "tool": {
+          "added": 0,
+          "deleted": 0,
+          "changed": 0,
+          "touched": 0
+        },
+        "unknown": {
+          "added": 2,
+          "deleted": 0,
+          "changed": 2,
+          "touched": 2
+        }
+      },
+      "linesTouched": 2
+    },
+    {
+      "file": "assets/site.css",
+      "action": "edited",
+      "linesAffected": 1,
+      "linesAdded": 1,
+      "linesDeleted": 1,
+      "totalLines": 2,
+      "assistant": null,
+      "actors": {
+        "ai": {
+          "added": 0,
+          "deleted": 0,
+          "changed": 0,
+          "touched": 0
+        },
+        "manual": {
+          "added": 0,
+          "deleted": 0,
+          "changed": 0,
+          "touched": 0
+        },
+        "tool": {
+          "added": 0,
+          "deleted": 0,
+          "changed": 0,
+          "touched": 0
+        },
+        "unknown": {
+          "added": 1,
+          "deleted": 1,
+          "changed": 2,
+          "touched": 1
+        }
+      },
+      "linesTouched": 1
+    },
+    {
+      "file": "assets/styles.input.css",
+      "action": "edited",
+      "linesAffected": 1,
+      "linesAdded": 0,
+      "linesDeleted": 1,
+      "totalLines": 281,
+      "assistant": "codex",
+      "actors": {
+        "ai": {
+          "added": 0,
+          "deleted": 1,
+          "changed": 1,
+          "touched": 1
+        },
+        "manual": {
+          "added": 0,
+          "deleted": 0,
+          "changed": 0,
+          "touched": 0
+        },
+        "tool": {
+          "added": 0,
+          "deleted": 0,
+          "changed": 0,
+          "touched": 0
+        },
+        "unknown": {
+          "added": 0,
+          "deleted": 0,
+          "changed": 0,
+          "touched": 0
+        }
+      },
+      "hosts": [
+        "codex-cli"
+      ],
+      "linesTouched": 1
+    },
+    {
+      "file": "data/shop.json",
+      "action": "edited",
+      "linesAffected": 6,
+      "linesAdded": 2,
+      "linesDeleted": 6,
+      "totalLines": 47,
+      "assistant": "codex",
+      "actors": {
+        "ai": {
+          "added": 2,
+          "deleted": 6,
+          "changed": 8,
+          "touched": 6
+        },
+        "manual": {
+          "added": 0,
+          "deleted": 0,
+          "changed": 0,
+          "touched": 0
+        },
+        "tool": {
+          "added": 0,
+          "deleted": 0,
+          "changed": 0,
+          "touched": 0
+        },
+        "unknown": {
+          "added": 0,
+          "deleted": 0,
+          "changed": 0,
+          "touched": 0
+        }
+      },
+      "hosts": [
+        "codex-cli"
+      ],
+      "linesTouched": 6
+    },
+    {
+      "file": "docs/ordering-content.md",
+      "action": "edited",
+      "linesAffected": 3,
+      "linesAdded": 2,
+      "linesDeleted": 3,
+      "totalLines": 32,
+      "assistant": "codex",
+      "actors": {
+        "ai": {
+          "added": 2,
+          "deleted": 3,
+          "changed": 5,
+          "touched": 3
+        },
+        "manual": {
+          "added": 0,
+          "deleted": 0,
+          "changed": 0,
+          "touched": 0
+        },
+        "tool": {
+          "added": 0,
+          "deleted": 0,
+          "changed": 0,
+          "touched": 0
+        },
+        "unknown": {
+          "added": 0,
+          "deleted": 0,
+          "changed": 0,
+          "touched": 0
+        }
+      },
+      "hosts": [
+        "codex-cli"
+      ],
+      "linesTouched": 3
+    },
+    {
+      "file": "index.html",
+      "action": "edited",
+      "linesAffected": 4,
+      "linesAdded": 3,
+      "linesDeleted": 4,
+      "totalLines": 173,
+      "assistant": "codex",
+      "actors": {
+        "ai": {
+          "added": 0,
+          "deleted": 1,
+          "changed": 1,
+          "touched": 1
+        },
+        "manual": {
+          "added": 0,
+          "deleted": 0,
+          "changed": 0,
+          "touched": 0
+        },
+        "tool": {
+          "added": 0,
+          "deleted": 0,
+          "changed": 0,
+          "touched": 0
+        },
+        "unknown": {
+          "added": 3,
+          "deleted": 3,
+          "changed": 6,
+          "touched": 3
+        }
+      },
+      "linesTouched": 4
+    },
+    {
+      "file": "ingredients.html",
+      "action": "edited",
+      "linesAffected": 1,
+      "linesAdded": 1,
+      "linesDeleted": 1,
+      "totalLines": 369,
+      "assistant": null,
+      "actors": {
+        "ai": {
+          "added": 0,
+          "deleted": 0,
+          "changed": 0,
+          "touched": 0
+        },
+        "manual": {
+          "added": 0,
+          "deleted": 0,
+          "changed": 0,
+          "touched": 0
+        },
+        "tool": {
+          "added": 0,
+          "deleted": 0,
+          "changed": 0,
+          "touched": 0
+        },
+        "unknown": {
+          "added": 1,
+          "deleted": 1,
+          "changed": 2,
+          "touched": 1
+        }
+      },
+      "linesTouched": 1
+    },
+    {
+      "file": "tests/site.spec.cjs",
+      "action": "edited",
+      "linesAffected": 3,
+      "linesAdded": 3,
+      "linesDeleted": 3,
+      "totalLines": 89,
+      "assistant": "codex",
+      "actors": {
+        "ai": {
+          "added": 3,
+          "deleted": 3,
+          "changed": 6,
+          "touched": 3
+        },
+        "manual": {
+          "added": 0,
+          "deleted": 0,
+          "changed": 0,
+          "touched": 0
+        },
+        "tool": {
+          "added": 0,
+          "deleted": 0,
+          "changed": 0,
+          "touched": 0
+        },
+        "unknown": {
+          "added": 0,
+          "deleted": 0,
+          "changed": 0,
+          "touched": 0
+        }
+      },
+      "hosts": [
+        "codex-cli"
+      ],
+      "linesTouched": 3
+    },
+    {
+      "file": "tests/test_site.py",
+      "action": "edited",
+      "linesAffected": 6,
+      "linesAdded": 6,
+      "linesDeleted": 2,
+      "totalLines": 195,
+      "assistant": "codex",
+      "actors": {
+        "ai": {
+          "added": 6,
+          "deleted": 2,
+          "changed": 8,
+          "touched": 6
+        },
+        "manual": {
+          "added": 0,
+          "deleted": 0,
+          "changed": 0,
+          "touched": 0
+        },
+        "tool": {
+          "added": 0,
+          "deleted": 0,
+          "changed": 0,
+          "touched": 0
+        },
+        "unknown": {
+          "added": 0,
+          "deleted": 0,
+          "changed": 0,
+          "touched": 0
+        }
+      },
+      "hosts": [
+        "codex-cli"
+      ],
+      "linesTouched": 6
+    }
+  ],
+  "hunks": [
+    {
+      "hunkId": "staged:1:404.html",
+      "relativePath": "404.html",
+      "oldStart": 2,
+      "oldLines": 1,
+      "newStart": 2,
+      "newLines": 1,
+      "linesAdded": 1,
+      "linesDeleted": 1,
+      "attribution": {
+        "bucket": "unknown",
+        "contributors": [
+          {
+            "actor": "unknown",
+            "tool": null,
+            "source": null,
+            "evidenceLevel": "unknown"
+          }
+        ],
+        "actors": [
+          "unknown"
+        ],
+        "aiInvolved": false,
+        "humanInvolved": false,
+        "toolInvolved": false,
+        "unknownInvolved": true
+      },
+      "evidence": {
+        "level": "unknown",
+        "kind": "unknown",
+        "source": "staged-diff",
+        "reason": null
+      },
+      "metadata": {
+        "strategy": "staged-diff-hunk-overlap-v1",
+        "stagedStatus": "M",
+        "oldPath": "404.html",
+        "newPath": "404.html",
+        "matchedOperationCount": 0,
+        "matchedHunkCount": 0,
+        "matchedInheritedHunkCount": 0,
+        "actorLineCounts": {
+          "ai": {
+            "added": 0,
+            "deleted": 0,
+            "changed": 0,
+            "touched": 0
+          },
+          "manual": {
+            "added": 0,
+            "deleted": 0,
+            "changed": 0,
+            "touched": 0
+          },
+          "tool": {
+            "added": 0,
+            "deleted": 0,
+            "changed": 0,
+            "touched": 0
+          },
+          "unknown": {
+            "added": 1,
+            "deleted": 1,
+            "changed": 2,
+            "touched": 1
+          }
+        },
+        "actorLineCountsSource": "working-tree-edited-file-actor-snapshot"
+      }
+    },
+    {
+      "hunkId": "staged:2:assets/site.c1140b2d46934d7b.css",
+      "relativePath": "assets/site.c1140b2d46934d7b.css",
+      "oldStart": 0,
+      "oldLines": 0,
+      "newStart": 1,
+      "newLines": 2,
+      "linesAdded": 2,
+      "linesDeleted": 0,
+      "attribution": {
+        "bucket": "unknown",
+        "contributors": [
+          {
+            "actor": "unknown",
+            "tool": null,
+            "source": "staged-diff",
+            "evidenceLevel": "unknown"
+          }
+        ],
+        "actors": [
+          "unknown"
+        ],
+        "aiInvolved": false,
+        "humanInvolved": false,
+        "toolInvolved": false,
+        "unknownInvolved": true
+      },
+      "evidence": {
+        "level": "unknown",
+        "kind": "unknown",
+        "source": "staged-diff",
+        "reason": null
+      },
+      "metadata": {
+        "strategy": "staged-diff-hunk-overlap-v1",
+        "stagedStatus": "A",
+        "oldPath": null,
+        "newPath": "assets/site.c1140b2d46934d7b.css",
+        "matchedOperationCount": 0,
+        "matchedHunkCount": 0,
+        "matchedInheritedHunkCount": 0,
+        "actorLineCounts": {
+          "unknown": {
+            "added": 2,
+            "deleted": 0,
+            "changed": 2,
+            "touched": 2
+          }
+        },
+        "actorLineCountsSource": "ci-note-attribution-bucket-fallback"
+      }
+    },
+    {
+      "hunkId": "staged:3:assets/site.css",
+      "relativePath": "assets/site.css",
+      "oldStart": 2,
+      "oldLines": 1,
+      "newStart": 2,
+      "newLines": 1,
+      "linesAdded": 1,
+      "linesDeleted": 1,
+      "attribution": {
+        "bucket": "unknown",
+        "contributors": [
+          {
+            "actor": "unknown",
+            "tool": null,
+            "source": null,
+            "evidenceLevel": "unknown"
+          }
+        ],
+        "actors": [
+          "unknown"
+        ],
+        "aiInvolved": false,
+        "humanInvolved": false,
+        "toolInvolved": false,
+        "unknownInvolved": true
+      },
+      "evidence": {
+        "level": "unknown",
+        "kind": "unknown",
+        "source": "staged-diff",
+        "reason": null
+      },
+      "metadata": {
+        "strategy": "staged-diff-hunk-overlap-v1",
+        "stagedStatus": "M",
+        "oldPath": "assets/site.css",
+        "newPath": "assets/site.css",
+        "matchedOperationCount": 0,
+        "matchedHunkCount": 0,
+        "matchedInheritedHunkCount": 0,
+        "actorLineCounts": {
+          "ai": {
+            "added": 0,
+            "deleted": 0,
+            "changed": 0,
+            "touched": 0
+          },
+          "manual": {
+            "added": 0,
+            "deleted": 0,
+            "changed": 0,
+            "touched": 0
+          },
+          "tool": {
+            "added": 0,
+            "deleted": 0,
+            "changed": 0,
+            "touched": 0
+          },
+          "unknown": {
+            "added": 1,
+            "deleted": 1,
+            "changed": 2,
+            "touched": 1
+          }
+        },
+        "actorLineCountsSource": "working-tree-edited-file-actor-snapshot"
+      }
+    },
+    {
+      "hunkId": "staged:4:assets/styles.input.css:codex-patch:all",
+      "relativePath": "assets/styles.input.css",
+      "oldStart": 198,
+      "oldLines": 1,
+      "newStart": 197,
+      "newLines": 0,
+      "linesAdded": 0,
+      "linesDeleted": 1,
+      "attribution": {
+        "bucket": "ai_only",
+        "contributors": [
+          {
+            "actor": "ai",
+            "tool": "codex",
+            "source": "codex-session.patch",
+            "evidenceLevel": "direct"
+          }
+        ],
+        "actors": [
+          "ai"
+        ],
+        "aiInvolved": true,
+        "humanInvolved": false,
+        "toolInvolved": false,
+        "unknownInvolved": false
+      },
+      "evidence": {
+        "level": "inferred",
+        "kind": "codex_session",
+        "source": "codex-session.patch",
+        "reason": null
+      },
+      "metadata": {
+        "strategy": "staged-diff-hunk-overlap-v1",
+        "stagedStatus": "M",
+        "oldPath": "assets/styles.input.css",
+        "newPath": "assets/styles.input.css",
+        "matchedOperationCount": 0,
+        "matchedHunkCount": 1,
+        "matchedInheritedHunkCount": 1,
+        "unattributedFallback": true,
+        "unattributedFallbackSource": "environment.codex-thread-env",
+        "host": "codex-cli",
+        "codexSessionTouchedFile": true,
+        "codexSessionFreshForFile": true,
+        "codexSessionTouchedFileCount": 6,
+        "postSessionTrailingBlankManual": false,
+        "postSessionTrailingBlankLineNumber": null,
+        "postSessionExternalFollowUp": false,
+        "postSessionDirectManualHunks": [],
+        "codexSessionPatchCoverage": true,
+        "actorLineCounts": {
+          "ai": {
+            "added": 0,
+            "deleted": 1,
+            "changed": 1,
+            "touched": 1
+          },
+          "manual": {
+            "added": 0,
+            "deleted": 0,
+            "changed": 0,
+            "touched": 0
+          },
+          "tool": {
+            "added": 0,
+            "deleted": 0,
+            "changed": 0,
+            "touched": 0
+          },
+          "unknown": {
+            "added": 0,
+            "deleted": 0,
+            "changed": 0,
+            "touched": 0
+          }
+        },
+        "actorLineCountsSource": "working-tree-edited-file-actor-snapshot"
+      }
+    },
+    {
+      "hunkId": "staged:5:data/shop.json:codex-patch:all:working-tree-actor:ai",
+      "relativePath": "data/shop.json",
+      "oldStart": 13,
+      "oldLines": 6,
+      "newStart": 13,
+      "newLines": 2,
+      "linesAdded": 2,
+      "linesDeleted": 6,
+      "attribution": {
+        "bucket": "ai_only",
+        "contributors": [
+          {
+            "actor": "ai",
+            "tool": "codex",
+            "source": "codex-session.patch",
+            "evidenceLevel": "direct"
+          }
+        ],
+        "actors": [
+          "ai"
+        ],
+        "aiInvolved": true,
+        "humanInvolved": false,
+        "toolInvolved": false,
+        "unknownInvolved": false
+      },
+      "evidence": {
+        "level": "inferred",
+        "kind": "codex_session",
+        "source": "codex-session.patch",
+        "reason": null
+      },
+      "metadata": {
+        "strategy": "staged-diff-hunk-overlap-v1",
+        "stagedStatus": "M",
+        "oldPath": "data/shop.json",
+        "newPath": "data/shop.json",
+        "matchedOperationCount": 0,
+        "matchedHunkCount": 1,
+        "matchedInheritedHunkCount": 1,
+        "unattributedFallback": true,
+        "unattributedFallbackSource": "environment.codex-thread-env",
+        "host": "codex-cli",
+        "codexSessionTouchedFile": true,
+        "codexSessionFreshForFile": true,
+        "codexSessionTouchedFileCount": 6,
+        "postSessionTrailingBlankManual": false,
+        "postSessionTrailingBlankLineNumber": null,
+        "postSessionExternalFollowUp": false,
+        "postSessionDirectManualHunks": [],
+        "codexSessionPatchCoverage": true,
+        "effectiveLineAttribution": true,
+        "effectiveBucket": "ai_only",
+        "actorLineCounts": {
+          "ai": {
+            "added": 2,
+            "deleted": 6,
+            "changed": 8,
+            "touched": 6
+          }
+        },
+        "actorLineCountsSource": "working-tree-edited-file-actor-snapshot"
+      }
+    },
+    {
+      "hunkId": "staged:8:docs/ordering-content.md:codex-patch:all:working-tree-actor:ai",
+      "relativePath": "docs/ordering-content.md",
+      "oldStart": 7,
+      "oldLines": 3,
+      "newStart": 7,
+      "newLines": 2,
+      "linesAdded": 2,
+      "linesDeleted": 3,
+      "attribution": {
+        "bucket": "ai_only",
+        "contributors": [
+          {
+            "actor": "ai",
+            "tool": "codex",
+            "source": "codex-session.patch",
+            "evidenceLevel": "direct"
+          }
+        ],
+        "actors": [
+          "ai"
+        ],
+        "aiInvolved": true,
+        "humanInvolved": false,
+        "toolInvolved": false,
+        "unknownInvolved": false
+      },
+      "evidence": {
+        "level": "inferred",
+        "kind": "codex_session",
+        "source": "codex-session.patch",
+        "reason": null
+      },
+      "metadata": {
+        "strategy": "staged-diff-hunk-overlap-v1",
+        "stagedStatus": "M",
+        "oldPath": "docs/ordering-content.md",
+        "newPath": "docs/ordering-content.md",
+        "matchedOperationCount": 0,
+        "matchedHunkCount": 1,
+        "matchedInheritedHunkCount": 1,
+        "unattributedFallback": true,
+        "unattributedFallbackSource": "environment.codex-thread-env",
+        "host": "codex-cli",
+        "codexSessionTouchedFile": true,
+        "codexSessionFreshForFile": true,
+        "codexSessionTouchedFileCount": 6,
+        "postSessionTrailingBlankManual": false,
+        "postSessionTrailingBlankLineNumber": null,
+        "postSessionExternalFollowUp": false,
+        "postSessionDirectManualHunks": [],
+        "codexSessionPatchCoverage": true,
+        "effectiveLineAttribution": true,
+        "effectiveBucket": "ai_only",
+        "actorLineCounts": {
+          "ai": {
+            "added": 2,
+            "deleted": 3,
+            "changed": 5,
+            "touched": 3
+          }
+        },
+        "actorLineCountsSource": "working-tree-edited-file-actor-snapshot"
+      }
+    },
+    {
+      "hunkId": "staged:10:index.html:working-tree-actor:ai",
+      "relativePath": "index.html",
+      "oldStart": 27,
+      "oldLines": 1,
+      "newStart": 27,
+      "newLines": 0,
+      "linesAdded": 0,
+      "linesDeleted": 1,
+      "attribution": {
+        "bucket": "ai_only",
+        "contributors": [
+          {
+            "actor": "ai",
+            "tool": "codex",
+            "source": "codex-session.patch",
+            "evidenceLevel": "direct"
+          }
+        ],
+        "actors": [
+          "ai"
+        ],
+        "aiInvolved": true,
+        "humanInvolved": false,
+        "toolInvolved": false,
+        "unknownInvolved": false
+      },
+      "evidence": {
+        "level": "inferred",
+        "kind": "codex_session",
+        "source": "codex-session.patch",
+        "reason": null
+      },
+      "metadata": {
+        "strategy": "staged-diff-hunk-overlap-v1",
+        "stagedStatus": "M",
+        "oldPath": "index.html",
+        "newPath": "index.html",
+        "matchedOperationCount": 0,
+        "matchedHunkCount": 0,
+        "matchedInheritedHunkCount": 0,
+        "unattributedFallback": true,
+        "unattributedFallbackSource": "environment.codex-thread-env",
+        "codexSessionPatchCoverage": true,
+        "codexSessionFreshForFile": true,
+        "codexSessionTouchedFile": true,
+        "codexSessionTouchedFileCount": 6,
+        "effectiveLineAttribution": true,
+        "effectiveBucket": "ai_only",
+        "actorLineCounts": {
+          "ai": {
+            "added": 0,
+            "deleted": 1,
+            "changed": 1,
+            "touched": 1
+          }
+        },
+        "actorLineCountsSource": "working-tree-edited-file-actor-snapshot"
+      }
+    },
+    {
+      "hunkId": "staged:10:index.html:working-tree-actor:unknown",
+      "relativePath": "index.html",
+      "oldStart": 28,
+      "oldLines": 3,
+      "newStart": 27,
+      "newLines": 3,
+      "linesAdded": 3,
+      "linesDeleted": 3,
+      "attribution": {
+        "bucket": "unknown",
+        "contributors": [
+          {
+            "actor": "unknown",
+            "tool": null,
+            "source": null,
+            "evidenceLevel": "unknown"
+          }
+        ],
+        "actors": [
+          "unknown"
+        ],
+        "aiInvolved": false,
+        "humanInvolved": false,
+        "toolInvolved": false,
+        "unknownInvolved": true
+      },
+      "evidence": {
+        "level": "inferred",
+        "kind": "environment",
+        "source": "environment.codex-thread-env",
+        "reason": null
+      },
+      "metadata": {
+        "strategy": "staged-diff-hunk-overlap-v1",
+        "stagedStatus": "M",
+        "oldPath": "index.html",
+        "newPath": "index.html",
+        "matchedOperationCount": 0,
+        "matchedHunkCount": 0,
+        "matchedInheritedHunkCount": 0,
+        "unattributedFallback": true,
+        "unattributedFallbackSource": "environment.codex-thread-env",
+        "effectiveLineAttribution": true,
+        "effectiveBucket": "unknown",
+        "actorLineCounts": {
+          "unknown": {
+            "added": 3,
+            "deleted": 3,
+            "changed": 6,
+            "touched": 3
+          }
+        },
+        "actorLineCountsSource": "working-tree-edited-file-actor-snapshot"
+      }
+    },
+    {
+      "hunkId": "staged:14:ingredients.html",
+      "relativePath": "ingredients.html",
+      "oldStart": 27,
+      "oldLines": 1,
+      "newStart": 27,
+      "newLines": 1,
+      "linesAdded": 1,
+      "linesDeleted": 1,
+      "attribution": {
+        "bucket": "unknown",
+        "contributors": [
+          {
+            "actor": "unknown",
+            "tool": null,
+            "source": null,
+            "evidenceLevel": "unknown"
+          }
+        ],
+        "actors": [
+          "unknown"
+        ],
+        "aiInvolved": false,
+        "humanInvolved": false,
+        "toolInvolved": false,
+        "unknownInvolved": true
+      },
+      "evidence": {
+        "level": "unknown",
+        "kind": "unknown",
+        "source": "staged-diff",
+        "reason": null
+      },
+      "metadata": {
+        "strategy": "staged-diff-hunk-overlap-v1",
+        "stagedStatus": "M",
+        "oldPath": "ingredients.html",
+        "newPath": "ingredients.html",
+        "matchedOperationCount": 0,
+        "matchedHunkCount": 0,
+        "matchedInheritedHunkCount": 0,
+        "actorLineCounts": {
+          "ai": {
+            "added": 0,
+            "deleted": 0,
+            "changed": 0,
+            "touched": 0
+          },
+          "manual": {
+            "added": 0,
+            "deleted": 0,
+            "changed": 0,
+            "touched": 0
+          },
+          "tool": {
+            "added": 0,
+            "deleted": 0,
+            "changed": 0,
+            "touched": 0
+          },
+          "unknown": {
+            "added": 1,
+            "deleted": 1,
+            "changed": 2,
+            "touched": 1
+          }
+        },
+        "actorLineCountsSource": "working-tree-edited-file-actor-snapshot"
+      }
+    },
+    {
+      "hunkId": "staged:15:tests/site.spec.cjs:codex-patch:all:working-tree-actor:ai",
+      "relativePath": "tests/site.spec.cjs",
+      "oldStart": 17,
+      "oldLines": 3,
+      "newStart": 17,
+      "newLines": 3,
+      "linesAdded": 3,
+      "linesDeleted": 3,
+      "attribution": {
+        "bucket": "ai_only",
+        "contributors": [
+          {
+            "actor": "ai",
+            "tool": "codex",
+            "source": "codex-session.patch",
+            "evidenceLevel": "direct"
+          }
+        ],
+        "actors": [
+          "ai"
+        ],
+        "aiInvolved": true,
+        "humanInvolved": false,
+        "toolInvolved": false,
+        "unknownInvolved": false
+      },
+      "evidence": {
+        "level": "inferred",
+        "kind": "codex_session",
+        "source": "codex-session.patch",
+        "reason": null
+      },
+      "metadata": {
+        "strategy": "staged-diff-hunk-overlap-v1",
+        "stagedStatus": "M",
+        "oldPath": "tests/site.spec.cjs",
+        "newPath": "tests/site.spec.cjs",
+        "matchedOperationCount": 0,
+        "matchedHunkCount": 1,
+        "matchedInheritedHunkCount": 1,
+        "unattributedFallback": true,
+        "unattributedFallbackSource": "environment.codex-thread-env",
+        "host": "codex-cli",
+        "codexSessionTouchedFile": true,
+        "codexSessionFreshForFile": true,
+        "codexSessionTouchedFileCount": 6,
+        "postSessionTrailingBlankManual": false,
+        "postSessionTrailingBlankLineNumber": null,
+        "postSessionExternalFollowUp": false,
+        "postSessionDirectManualHunks": [],
+        "codexSessionPatchCoverage": true,
+        "effectiveLineAttribution": true,
+        "effectiveBucket": "ai_only",
+        "actorLineCounts": {
+          "ai": {
+            "added": 3,
+            "deleted": 3,
+            "changed": 6,
+            "touched": 3
+          }
+        },
+        "actorLineCountsSource": "working-tree-edited-file-actor-snapshot"
+      }
+    },
+    {
+      "hunkId": "staged:17:tests/test_site.py:codex-patch:all:working-tree-actor:ai",
+      "relativePath": "tests/test_site.py",
+      "oldStart": 135,
+      "oldLines": 2,
+      "newStart": 135,
+      "newLines": 6,
+      "linesAdded": 6,
+      "linesDeleted": 2,
+      "attribution": {
+        "bucket": "ai_only",
+        "contributors": [
+          {
+            "actor": "ai",
+            "tool": "codex",
+            "source": "codex-session.patch",
+            "evidenceLevel": "direct"
+          }
+        ],
+        "actors": [
+          "ai"
+        ],
+        "aiInvolved": true,
+        "humanInvolved": false,
+        "toolInvolved": false,
+        "unknownInvolved": false
+      },
+      "evidence": {
+        "level": "inferred",
+        "kind": "codex_session",
+        "source": "codex-session.patch",
+        "reason": null
+      },
+      "metadata": {
+        "strategy": "staged-diff-hunk-overlap-v1",
+        "stagedStatus": "M",
+        "oldPath": "tests/test_site.py",
+        "newPath": "tests/test_site.py",
+        "matchedOperationCount": 0,
+        "matchedHunkCount": 1,
+        "matchedInheritedHunkCount": 1,
+        "unattributedFallback": true,
+        "unattributedFallbackSource": "environment.codex-thread-env",
+        "host": "codex-cli",
+        "codexSessionTouchedFile": true,
+        "codexSessionFreshForFile": true,
+        "codexSessionTouchedFileCount": 6,
+        "postSessionTrailingBlankManual": false,
+        "postSessionTrailingBlankLineNumber": null,
+        "postSessionExternalFollowUp": false,
+        "postSessionDirectManualHunks": [],
+        "codexSessionPatchCoverage": true,
+        "effectiveLineAttribution": true,
+        "effectiveBucket": "ai_only",
+        "actorLineCounts": {
+          "ai": {
+            "added": 6,
+            "deleted": 2,
+            "changed": 8,
+            "touched": 6
+          }
+        },
+        "actorLineCountsSource": "working-tree-edited-file-actor-snapshot"
+      }
+    }
+  ],
+  "summary": {
+    "totalHunks": 11,
+    "buckets": {
+      "ai_only": 6,
+      "human_only": 0,
+      "tool_only": 0,
+      "mixed_ai_human": 0,
+      "mixed_ai_tool": 0,
+      "mixed_human_tool": 0,
+      "mixed_ai_human_tool": 0,
+      "unknown": 5
+    },
+    "aiInvolved": 6,
+    "humanInvolved": 0,
+    "toolInvolved": 0,
+    "unknownInvolved": 5,
+    "linesAdded": 21,
+    "linesDeleted": 22
+  },
+  "reconciliation": {
+    "schemaVersion": 3,
+    "strategy": "staged-diff-hunk-overlap-v1",
+    "stagedHunkCount": 19,
+    "matchedHunkCount": 12,
+    "unknownHunkCount": 5,
+    "files": [
+      "404.html",
+      "assets/site.c1140b2d46934d7b.css",
+      "assets/site.css",
+      "assets/styles.input.css",
+      "data/shop.json",
+      "docs/ordering-content.md",
+      "index.html",
+      "ingredients.html",
+      "tests/site.spec.cjs",
+      "tests/test_site.py"
+    ],
+    "lineSummaryByBucket": {
+      "ai_only": {
+        "hunks": 6,
+        "linesAdded": 13,
+        "linesDeleted": 16
+      },
+      "human_only": {
+        "hunks": 0,
+        "linesAdded": 0,
+        "linesDeleted": 0
+      },
+      "tool_only": {
+        "hunks": 0,
+        "linesAdded": 0,
+        "linesDeleted": 0
+      },
+      "mixed_ai_human": {
+        "hunks": 0,
+        "linesAdded": 0,
+        "linesDeleted": 0
+      },
+      "mixed_ai_tool": {
+        "hunks": 0,
+        "linesAdded": 0,
+        "linesDeleted": 0
+      },
+      "mixed_human_tool": {
+        "hunks": 0,
+        "linesAdded": 0,
+        "linesDeleted": 0
+      },
+      "mixed_ai_human_tool": {
+        "hunks": 0,
+        "linesAdded": 0,
+        "linesDeleted": 0
+      },
+      "unknown": {
+        "hunks": 5,
+        "linesAdded": 8,
+        "linesDeleted": 6
+      }
+    },
+    "hunkSummary": {
+      "totalHunks": 11,
+      "buckets": {
+        "ai_only": 6,
+        "human_only": 0,
+        "tool_only": 0,
+        "mixed_ai_human": 0,
+        "mixed_ai_tool": 0,
+        "mixed_human_tool": 0,
+        "mixed_ai_human_tool": 0,
+        "unknown": 5
+      },
+      "aiInvolved": 6,
+      "humanInvolved": 0,
+      "toolInvolved": 0,
+      "unknownInvolved": 5,
+      "linesAdded": 21,
+      "linesDeleted": 22
+    }
+  }
+}
