@@ -10,22 +10,18 @@
     {
       "id": "500g",
       "label": "500 g",
-      "price_inr": 300
+      "price_inr": 450
     },
     {
       "id": "1kg",
       "label": "1 kg",
-      "price_inr": 600
+      "price_inr": 850
     }
   ],
   "faqs": [
     {
       "question": "When will my order be dispatched?",
       "answer": "We prepare the blend fresh after taking your order and dispatch it within one week of order confirmation. Dispatch is usually within 2–3 days of preparation. Delivery time depends on your city."
-    },
-    {
-      "question": "Is delivery free?",
-      "answer": "Yes. Our Early Bird offer includes free delivery across India. The offer continues until we announce a change."
     },
     {
       "question": "How can I pay?",

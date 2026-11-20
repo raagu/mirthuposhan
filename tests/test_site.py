@@ -132,7 +132,7 @@ class SiteTest(unittest.TestCase):
 
     def test_pack_prices_and_order_destinations(self):
         home = self.documents['index.html']
-        for label, price in [('500 g', '₹300'), ('1 kg', '₹600')]:
+        for label, price in [('500 g', '₹450'), ('1 kg', '₹850')]:
             name = f'Order on WhatsApp: {label} for {price}'
             link = home.find('a', **{'aria-label': name})[0]
             url = urlsplit(link['href'])
@@ -156,13 +156,17 @@ class SiteTest(unittest.TestCase):
         self.assertFalse(home.find('article', **{'class': 'ingredient-detail'}))
         self.assertEqual(len(self.documents['ingredients.html'].find('article')), 42)
         faqs = [a for a in home.find('details') if 'faq-item' in a.get('class', '').split()]
-        self.assertEqual(len(faqs), 7)
+        self.assertEqual(len(faqs), 6)
         self.assertTrue(all('open' not in a for a in home.find('details')))
         source = (ROOT / 'index.html').read_text()
         self.assertIn('https://share.google/eFBwM7jvW1bbd8ieB', source)
         self.assertNotIn('info@mirthuposhan.com', source)
         self.assertNotIn('api.web3forms.com', source)
         self.assertIn('<title>Mirthu Poshan | Homemade Malt Flour with 42 Ingredients</title>', source)
+        for name in self.documents:
+            self.assertNotRegex((ROOT / name).read_text().casefold(),
+                                r'free\s+(?:delivery|shipping)|(?:delivery|shipping)\s+(?:is\s+)?free|early\s*bird',
+                                f'Outdated delivery promotion in {name}')
 
     def test_historical_urls_continue_to_live_sections(self):
         for name in ('about.html', 'products.html', 'benefits.html', 'contact.html'):

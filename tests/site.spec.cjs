@@ -14,8 +14,8 @@ for (const width of [375, 1440]) {
         await expect(page.locator('.home-footer').getByRole('img', { name: 'The power of 42 grains', exact: true })).toBeVisible();
         await expect(page.locator('.category-card')).toHaveCount(6);
         await expect(page.locator('.pack-card')).toHaveCount(2);
-        await expect(page.getByRole('link', { name: 'Order on WhatsApp: 500 g for ₹300' })).toBeVisible();
-        await expect(page.getByRole('link', { name: 'Order on WhatsApp: 1 kg for ₹600' })).toBeVisible();
+        await expect(page.getByRole('link', { name: 'Order on WhatsApp: 500 g for ₹450' })).toBeVisible();
+        await expect(page.getByRole('link', { name: 'Order on WhatsApp: 1 kg for ₹850' })).toBeVisible();
         await expect(page.locator('#faq details[open]')).toHaveCount(0);
         await page.locator('#faq summary').filter({ hasText: 'How can I pay?' }).click();
         await expect(page.getByText('Courier orders require UPI payment.', { exact: false })).toBeVisible();
@@ -47,7 +47,7 @@ for (const width of [375, 1440]) {
   }
 }
 
-for (const [size, price] of [['500 g', '₹300'], ['1 kg', '₹600']]) {
+for (const [size, price] of [['500 g', '₹450'], ['1 kg', '₹850']]) {
   test(`order link opens the correct WhatsApp draft: ${size}`, async ({ context, page }) => {
     // No message is sent and no request reaches WhatsApp.
     await context.route('https://wa.me/**', route => route.fulfill({contentType:'text/html',body:'Order draft preview'}));
